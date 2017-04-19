@@ -1,0 +1,223 @@
+/*GENERAL STYLES*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body {
+	margin: 0;
+}
+
+.center {
+	margin: 0 auto;
+	width:80%;
+}
+
+section h3 {
+	color: #333;
+	float: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 120px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+/*HEADER*/
+header{
+	background-image: url("../img/background.jpg");
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+}
+
+header .center {
+	display: table;
+	height: 100vh;
+	position:relative;
+}
+
+header .logo {
+	position: absolute;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+header nav {
+	position: absolute;
+	right: 0;
+} 
+
+header nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+header nav li {
+	display: inline;
+}
+
+header nav a {
+	color: white;
+	cursor: pointer;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 14px;
+	line-height: 40px;
+	padding: 3px 3px 3px 35px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header nav a span {
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	transition: border .2s;
+}
+
+header nav li i
+{
+	color: white;
+	font-size: 45px;
+	padding: 5px;
+	display: table-cell;
+	text-align: center;
+}
+
+header nav a span i {
+	padding-left: 0;
+}
+
+header nav a:hover span,
+header nav a.active span {
+	border-bottom: 2px solid #FED136;
+}
+
+#conectare
+{
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	display: none;
+	margin-top: 10px;
+}
+
+ header form label
+ {
+ 	color: white;
+ 	padding: 10px;
+ 	font-family: 'Montserrat', sans-serif;
+  	font-size: 12px;
+ }
+header form input
+{
+	width: 150px;
+}
+ header form #nume label
+ {
+  	margin-left: 10px;
+ }
+
+ header form #button
+ {
+ 	margin-top:20px;
+ 	margin-right: 20px;
+ 	float: right;
+ 	transform: scale(2);
+ }
+
+ header form #button a
+ {
+ 	color: white;
+ }
+
+ header form #nume
+ {
+ 	margin-bottom: 5px;
+ }
+
+ header form #parola label
+ {
+  	margin-left: 11px;
+ }
+
+header nav ul li:last-child span:hover, 
+{
+	display: inline;
+}
+
+.nume 
+{
+	margin-right: 40px;
+}
+
+header div#salut
+{
+	color: white;
+    float: right;
+    display: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+}
+
+header .middle{
+	display: table-cell;
+	width: 100%;
+	text-align: center;
+	vertical-align:middle;
+} 
+
+h1 {
+	color: white;
+	font-family: 'Droid Serif', serif;
+	font-size: 70px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+h2 {
+	color: white;
+	font-family: 'Droid Serif', serif;
+	font-size:60px ;
+	font-weight: normal;
+}
+
+header .middle button {
+	background-color: #FED136;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	height: 65px;
+	margin-top: 60px;
+	transition: background-color .2s, color .6s;
+	width: 240px;
+}
+
+header .middle button:hover {
+	background-color: #FFF;
+	color: #FED136;
+}
+
+body #cont 
+{
+	display: block;
+	text-align: center;
+}
+
+#cont div
+{
+	padding: 10px;
+	margin-top: 10px;
+}
+
+#data_nastere-signup input
+{
+	width: 50px;
+}
