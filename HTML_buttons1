@@ -1,0 +1,74 @@
+
+      <section id="gamePicker">
+         <div class="center">
+            <h3>Sa ne jucam, muschetar!</h3>
+            <h4>Cu ce muschetar vrei sa te lupti astazi?</h4>
+            <ul class="gamePicker-list">
+               <li class="gamePicker-item">
+                  <a href="#">
+                     <figure class="gamePicker-image">
+                        <img src="assets/img/numaratoare.jpg">
+                        <div class="gamePicker-image-text">
+                           <h6>
+                              Matematica
+                           </h6>
+                        </div>
+                     </figure>
+                     <div class="gamePicker-description">
+                        <h6>
+                           Concentrare si curaj!
+                        </h6>
+                        <p>
+                           Matematica
+                        </p>
+                     </div>
+                  </a>
+               </li>
+               
+
+               <li class="gamePicker-item">
+                  <a href="#">
+                     <figure class="gamePicker-image">
+                        <img src="assets/img/pian2.jpg">
+                        <div class="gamePicker-image-text">
+                           <h6>
+                              Muzica
+                           </h6>
+                        </div>
+                     </figure>
+                     <div class="gamePicker-description">
+                        <h6>
+                           Energie si veselie!
+                        </h6>
+                        <p>
+                           Muzica
+                        </p>
+                     </div>
+                  </a>
+               </li>
+
+
+               <li class="gamePicker-item">
+                  <a href="#">
+                     <figure class="gamePicker-image">
+                        <img src="assets/img/palme.jpg">
+                        <div class="gamePicker-image-text">
+                           <h6>
+                              Mediu inconjurator
+                           </h6>
+                        </div>
+                     </figure>
+                     <div class="gamePicker-description">
+                        <h6>
+                           Responsabilitate si explorare!
+                        </h6>
+                        <p>
+                           Mediu inconjurator
+                        </p>
+                     </div>
+                  </a>
+               </li>
+            </ul>
+
+         </div>
+      </section>
