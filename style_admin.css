@@ -1,0 +1,338 @@
+/*GENERAL STYLES*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Mouse+Memoirs');
+
+body {
+	margin: 0;
+}
+
+.center {
+	margin: 0 auto;
+	width: 940px;
+}
+
+section h3 {
+	color: #333;
+	float: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 120px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+section h4 {
+	color: #666;
+	float: left;
+	font-family: 'Droid Serif', serif;
+	font-size: 16px;
+	font-style: italic;
+	margin-top: 24px;
+	text-align: center;
+	width: 100%;
+
+
+}
+
+/*HEADER*/
+header{
+	background-image: url("../img/background.jpg");
+	float: left;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+}
+
+header .center {
+	display: table;
+	height: 100vh;
+	position:relative;
+}
+
+header .logo {
+	position: absolute;
+	padding-top: 20px;
+	cursor: pointer;
+}
+header .logo {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 25px;
+	color: #FED136;
+	text-decoration: none;
+}
+
+header nav {
+	float: right;
+	position: absolute;
+	right: 0;
+} 
+
+header nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+header nav li {
+	display: inline;
+	
+}
+
+header nav li i
+{
+	/*border: 2px solid white;*/
+	/*border-radius: 100%;*/
+	color: white;
+	display: table-cell;
+	font-size: 45px;
+	padding: 5px;
+	text-align: center;
+	/*vertical-align: top;*/
+}
+
+header nav a {
+	color: white;
+	cursor: pointer;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 14px;
+	line-height: 41px;
+	padding: 3px 3px 3px 35px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header nav a span {
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	transition: border .2s;
+}
+
+header nav a span i {
+	padding-left: 0;
+}
+
+header nav a:hover span,
+header nav a.active span {
+	border-bottom: 2px solid #FED136;
+}
+
+
+
+/*header #conectare
+{
+	display: none;
+}*/
+
+#conectare
+{
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	/*display: block;*/
+	display: none;
+	margin-top: 10px;
+}
+
+ header form label
+ {
+ 	color: white;
+ 	padding: 10px;
+ 	/*display: inline;*/
+ 	font-family: 'Montserrat', sans-serif;
+  	font-size: 12px;
+ }
+header form input
+{
+	width: 150px;
+}
+ header form #nume label
+ {
+  	margin-left: 10px;
+ }
+
+ header form #button
+ {
+ 	margin-top:20px;
+ 	margin-right: 20px;
+ 	float: right;
+ 	transform: scale(2);
+ }
+
+ header form #button a
+ {
+ 	color: white;
+ }
+
+ header form #nume
+ {
+ 	margin-bottom: 5px;
+ }
+
+ header form #parola label
+ {
+  	margin-left: 11px;
+ }
+
+header nav ul li:last-child span:hover, 
+{
+	display: inline;
+
+	/*display: none;*/
+	/*display: block;*/
+}
+
+.nume 
+{
+	margin-right: 40px;
+}
+
+header div#salut
+{
+	color: white;
+    float: right;
+    display: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+}
+
+header .middle{
+	display: table-cell;
+	width: 100%;
+	text-align: center;
+	vertical-align:middle;
+} 
+
+h1 {
+	color: white;
+	font-family: 'Droid Serif', serif;
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-size: 70px;
+	font-weight: bold;
+	margin-bottom: 0;
+	/*text-transform: uppercase;*/
+}
+
+h2 {
+	color: white;
+	font-family: 'Droid Serif', serif;
+	font-size:50px ;
+	font-weight: normal;
+}
+
+header .middle button {
+	background-color: #FED136;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	height: 65px;
+	margin-top: 60px;
+	transition: background-color .2s, color .6s;
+	width: 240px;
+}
+
+header .middle button:hover {
+	background-color: #FFF;
+	color: #FED136;
+}
+
+#viz h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 55px;
+	color: #FED136;
+	margin-bottom: 5px;
+	margin-top: 80px;
+}
+#viz h4{
+	font-family: 'Droid Serif', serif;
+	font-size: 20px;
+	color: #FED136;
+	margin-top: 5px;
+	margin-bottom: 60px;
+}
+#viz h4 i{
+	color: #FED136;
+}
+#viz, #viz .viz-list{
+	float: left;
+	width: 100%;
+}
+#viz .viz-list{
+	padding-left: 0;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	list-style: none;
+}
+#viz .viz-list .viz-item{
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	text-align: center;
+	transition: box-shadow .2s ease;
+}
+
+#viz .viz-list .viz-item:nth-child(3){
+	margin-right: 0;
+}
+.viz-item a{
+	text-decoration: none;
+}
+.viz-item:hover{
+	box-shadow: 0 10px 19px rgba(0,0,0,0.13);
+}
+.viz-image{
+	margin: 0;
+	width: 100%;
+	height: 180px;
+	position: relative;
+	background-color: #000;
+	overflow: hidden;
+}
+.viz-image img{
+	width: 100%;
+	height: auto;
+	transition: opacity .3s, transform .3s;
+}
+.viz-image-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.viz-image-text h6{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 50px;
+	color: #DCAD62;
+	border: 2px solid #DCAD62;
+	display: none;
+	transition: display .3s;
+}
+.viz-item:hover .viz-image-text h6{
+	display: block;                                    /*runda1*/
+}
+.viz-item:hover .viz-image img{
+	opacity: 0.4;
+	transform: scale(1.15);
+}
+.viz-description{
+	font-size: 20px;
+}
+#viz span{
+	margin: 30px 20px 30px 20px;
+	color: #DCAD62;
+	font-size: 25px;
+	padding-left: 100px;
+} 
+
