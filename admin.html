@@ -4,6 +4,9 @@
 	<title>Admin</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style_admin.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- diacritice -->
 </head>
 <body>
 
@@ -14,7 +17,7 @@
 			
 			<nav>
 				<ul>
-					<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasa</span></a></li>
+					<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
 					<li><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i>Vizualizare</span></a></li>
 					<li><a href="#"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Modificare</span></a></li>
 					<li id="click"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectare</span></a></li>
@@ -29,78 +32,96 @@
 			</div>
 		</header>
 
-		<section id="viz">
-			<div class="center">
-			<h3>Vizualizare</h3>
-			<h4><i class="fa fa-info-circle" aria-hidden="true"></i>Informatiile din baza de date in acest moment<i class="fa fa-info-circle" aria-hidden="true"></i></h4>
-			<ul class="viz-list">
-				<li class="viz-item">
-					<a id="print" href="#">
-						<figure id="invatacei" class="viz-image">
-							<img src="assets/img/viz-1.jpg">
-							<div class="viz-image-text">
-							<h6>Invatacei</h6>
-							</div>
-						</figure>
-						<div class="viz-description">
-							<h6>Invatacei</h6>
-							<p>Utilizatorii elevi</p>
-						</div>
-					</a>
-				</li>
-				<!-- <script type="text/javascript">
-					document.getElementById("invatacei").onclick = function(){printFunction()};
-					function printFunction()
-					{
-						document.getElementById("print").href="select.php";
-					}
-				</script> -->
-				<li class="viz-item">
-					<a href="#">
-						<figure class="viz-image">
-							<img src="assets/img/viz-2.jpg">
-							<div class="viz-image-text">
-							<h6>Parinti</h6>
-							</div>
-						</figure>
-						<div class="viz-description">
-							<h6>Parinti</h6>
-							<p>Utilizatorii tutori</p>
-						</div>
-					</a>
-				</li>
-				<li class="viz-item">
-					<a href="#">
-						<figure class="viz-image">
-							<img src="assets/img/viz-3.jpg">
-							<div class="viz-image-text">
-							<h6>Teste</h6>
-							</div>
-						</figure>
-						<div class="viz-description">
-							<h6>Teste</h6>
-							<p>Testele introduse</p>
-						</div>
-					</a>
-				</li>
-				</ul>
-				<span>
-				<a href="#"><i class="fa fa-search" aria-hidden="true"></i>Alte informatii</a>
-				</span>
+
+		<div id="viz">
+			<!-- <div class="center"> -->
+				<div class="left">
+					<nav>
+					<ul>
+						<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
+						<li><a href="#" class=""><span><i class="fa fa-bar-chart" aria-hidden="true"></i>Statistici</span></a></li>
+						<li><span>Vizualizare</span></li>
+						<li><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i>Nefiltrată</span></a></li>
+						<li><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i>Filtrată</span></a></li>
+						<li><span>Modificare</span></li>
+						<li><a href="#"><span><i class="fa fa-plus-circle" aria-hidden="true"></i>Adăugare test</span></a></li>
+						<li><a href="#"><span><i class="fa fa-minus-circle" aria-hidden="true"></i>Ștergere test</span></a></li>
+						<li><a href="#"><span><i class="fa fa-check-circle" aria-hidden="true"></i>Modificare test</span></a></li>
+						<li><a href="#"><span><i class="fa fa-ban" aria-hidden="true"></i>Ștergere utilizator</span></a></li>
+					</ul>
+					</nav>
 				</div>
-			
 
+				<div class="right">
+					<h3>Vizualizare</h3>
+					<h4><i class="fa fa-info-circle" aria-hidden="true"></i>Informaţiile din baza de date în acest moment<i class="fa fa-info-circle" aria-hidden="true"></i></h4>
+					<ul class="viz-list">
+						<li class="viz-item">
+							<a id="print" href="#">
+								<figure id="invatacei" class="viz-image">
+									<img src="assets/img/viz-1.jpg">
+									<div class="viz-image-text">
+									<h6>Învăţăcei</h6>
+									</div>
+								</figure>
+								<div class="viz-description">
+									<h6>Învăţăcei</h6>
+									<p>Utilizatorii elevi</p>
+								</div>
+							</a>
+						</li>
+						<!-- <script type="text/javascript">
+							document.getElementById("invatacei").onclick = function(){printFunction()};
+							function printFunction()
+							{
+								document.getElementById("print").href="select.php";
+							}
+						</script> -->
+						<li class="viz-item">
+							<a href="#">
+								<figure class="viz-image">
+									<img src="assets/img/viz-2.jpg">
+									<div class="viz-image-text">
+									<h6>Părinţi</h6>
+									</div>
+								</figure>
+								<div class="viz-description">
+									<h6>Părinţi</h6>
+									<p>Utilizatorii tutori</p>
+								</div>
+							</a>
+						</li>
+						<li class="viz-item">
+							<a href="#">
+								<figure class="viz-image">
+									<img src="assets/img/viz-3.jpg">
+									<div class="viz-image-text">
+									<h6>Teste</h6>
+									</div>
+								</figure>
+								<div class="viz-description">
+									<h6>Teste</h6>
+									<p>Testele introduse</p>
+								</div>
+							</a>
+						</li>
+						</ul>
+						<form>
+							<h4>Dacă dorești orice altă informaţie, introdu fraza select corespunzătoare în câmpul de mai jos:</h4><br>
+							<input type="text" name="select">
+							<input type="submit" value="Trimite">
+						</form>
+						</div>
+				</div>
+			<!-- </div> -->
+		</div>
 
-		</section>
 		<section id="mod">
-			<h3>Modificare</h3>
-
+			<div class="right">
+				<h3>Modificare</h3>
+			</div>
 			
 		</section>
-		
-		<section id="team"></section>
-		<section id="logos"></section>
-		<section id="contact"></section>
 		<footer></footer>
 	</div>
 

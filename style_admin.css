@@ -5,6 +5,7 @@
 
 body {
 	margin: 0;
+	background-color: #142739;
 }
 
 .center {
@@ -15,7 +16,7 @@ body {
 section h3 {
 	color: #333;
 	float: left;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Palanquin Dark', sans-serif;
 	font-size: 40px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -28,7 +29,7 @@ section h3 {
 section h4 {
 	color: #666;
 	float: left;
-	font-family: 'Droid Serif', serif;
+	font-family: 'PT Serif', serif;
 	font-size: 16px;
 	font-style: italic;
 	margin-top: 24px;
@@ -98,7 +99,7 @@ header nav li i
 header nav a {
 	color: white;
 	cursor: pointer;
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Palanquin Dark',sans-serif;
 	font-size: 14px;
 	line-height: 41px;
 	padding: 3px 3px 3px 35px;
@@ -122,85 +123,6 @@ header nav a.active span {
 }
 
 
-
-/*header #conectare
-{
-	display: none;
-}*/
-
-#conectare
-{
-	float: right;
-	position: absolute;
-	right: 0;
-	top: 50px;
-	/*display: block;*/
-	display: none;
-	margin-top: 10px;
-}
-
- header form label
- {
- 	color: white;
- 	padding: 10px;
- 	/*display: inline;*/
- 	font-family: 'Montserrat', sans-serif;
-  	font-size: 12px;
- }
-header form input
-{
-	width: 150px;
-}
- header form #nume label
- {
-  	margin-left: 10px;
- }
-
- header form #button
- {
- 	margin-top:20px;
- 	margin-right: 20px;
- 	float: right;
- 	transform: scale(2);
- }
-
- header form #button a
- {
- 	color: white;
- }
-
- header form #nume
- {
- 	margin-bottom: 5px;
- }
-
- header form #parola label
- {
-  	margin-left: 11px;
- }
-
-header nav ul li:last-child span:hover, 
-{
-	display: inline;
-
-	/*display: none;*/
-	/*display: block;*/
-}
-
-.nume 
-{
-	margin-right: 40px;
-}
-
-header div#salut
-{
-	color: white;
-    float: right;
-    display: none;
-    font-family: 'Pacifico', cursive;
-    font-size: 40px;
-}
-
 header .middle{
 	display: table-cell;
 	width: 100%;
@@ -210,7 +132,7 @@ header .middle{
 
 h1 {
 	color: white;
-	font-family: 'Droid Serif', serif;
+	font-family: 'PT Serif', serif;
 	/*font-family: 'Montserrat', sans-serif;*/
 	font-size: 70px;
 	font-weight: bold;
@@ -220,7 +142,7 @@ h1 {
 
 h2 {
 	color: white;
-	font-family: 'Droid Serif', serif;
+	font-family: 'Palanquin Dark', serif;
 	font-size:50px ;
 	font-weight: normal;
 }
@@ -245,6 +167,56 @@ header .middle button:hover {
 	color: #FED136;
 }
 
+.left {
+	margin-left: 4%;
+	background-color: white;
+	width: 21%;
+	float: left;
+	border-radius: 5px;
+}
+.right {
+	margin-right: 4%;
+	width: 63%;
+	float: right; 
+}
+#viz {
+	width: 100%;
+}
+#viz nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+#viz nav span{
+	font-family: 'Montserrat',sans-serif;
+	font-size: 28px;
+	color: #001a33;
+	padding: 2px;
+	text-transform: uppercase;
+}
+#viz nav a {
+	cursor: pointer;
+	padding: 3px;
+	text-decoration: none;
+}
+#viz nav a span {
+	font-size: 21px;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: border .2s;
+	color: #001a33;
+	text-transform: none;
+}
+
+#viz nav a span i {
+	padding-left: 0;
+}
+#viz nav a span:hover{
+	text-decoration: underline;
+}
+
 #viz h3{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 55px;
@@ -257,12 +229,14 @@ header .middle button:hover {
 	font-size: 20px;
 	color: #FED136;
 	margin-top: 5px;
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 }
 #viz h4 i{
 	color: #FED136;
 }
-#viz, #viz .viz-list{
+#viz .viz-list{
+	margin-top: 50px;
+	margin-bottom: 50px;
 	float: left;
 	width: 100%;
 }
@@ -279,6 +253,7 @@ header .middle button:hover {
 	margin-bottom: 10px;
 	text-align: center;
 	transition: box-shadow .2s ease;
+	background-color: white;
 }
 
 #viz .viz-list .viz-item:nth-child(3){
@@ -293,7 +268,7 @@ header .middle button:hover {
 .viz-image{
 	margin: 0;
 	width: 100%;
-	height: 180px;
+	height: 155px;
 	position: relative;
 	background-color: #000;
 	overflow: hidden;
@@ -310,11 +285,11 @@ header .middle button:hover {
 	-webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    color: #FED136;
 }
 .viz-image-text h6{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 50px;
-	color: #DCAD62;
 	border: 2px solid #DCAD62;
 	display: none;
 	transition: display .3s;
@@ -328,11 +303,25 @@ header .middle button:hover {
 }
 .viz-description{
 	font-size: 20px;
+	color: #001a33;
 }
 #viz span{
 	margin: 30px 20px 30px 20px;
-	color: #DCAD62;
 	font-size: 25px;
 	padding-left: 100px;
+	color: white;
 } 
+#viz form input[type=text]{
+	width: 80%;
+	border: 2px solid #FED136;
+    border-radius: 5px;
+    color: #001a33;
+    font-weight: bold;
+}
+#viz form input[type=submit]{
+	background-color: #FED136;
+	color: #001a33;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
