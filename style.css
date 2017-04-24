@@ -18,14 +18,10 @@ section
 	border-bottom: 5px solid #FED136;
 }
 
-section:lastchild
-{
-	border:none;
-}
 section h3 {
 	color: #FED136;
 	float: left;
-	font-family: 'PT Serif', sans-serif;
+	font-family: 'Palaquin Dark', sans-serif;
 	font-size: 40px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -74,7 +70,7 @@ header nav li {
 header nav a {
 	color: white;
 	cursor: pointer;
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Palaquin Dark',sans-serif;
 	font-size: 14px;
 	line-height: 40px;
 	padding: 3px 3px 3px 35px;
@@ -120,7 +116,7 @@ header nav a.active span {
  {
  	color: white;
  	padding: 10px;
- 	font-family: 'Montserrat', sans-serif;
+ 	font-family: 'PT Serif', sans-serif;
   	font-size: 12px;
  }
 header form input
@@ -165,14 +161,6 @@ header nav ul li:last-child span:hover,
 	margin-right: 40px;
 }
 
-header div#salut
-{
-	color: white;
-    float: right;
-    display: none;
-    font-family: 'Pacifico', cursive;
-    font-size: 40px;
-}
 
 header .middle{
 	display: table-cell;
@@ -183,17 +171,10 @@ header .middle{
 
 h1 {
 	color: white;
-	font-family: 'Droid Serif', serif;
+	font-family: 'Montserrat', serif;
 	font-size: 70px;
 	font-weight: bold;
 	margin-bottom: 0;
-}
-
-h2 {
-	color: white;
-	font-family: 'Droid Serif', serif;
-	font-size:60px ;
-	font-weight: normal;
 }
 
 header .middle button {
@@ -202,7 +183,7 @@ header .middle button {
 	border-radius: 5px;
 	color: white;
 	cursor: pointer;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Palaquin Dark', sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	height: 65px;
@@ -262,7 +243,6 @@ body #cont
     padding-right: 15px;
     border: 1px solid #dbe2e8;
     font-size: 14px;
-    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
     border-radius: 2px;
     color: #2e3d49;
     cursor: pointer ;
@@ -270,7 +250,7 @@ body #cont
 
 #cont #connectButton, #cont .social
 {
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Palaquin Dark',sans-serif;
     display: inline-block;
     border: none;
     font-size: 12px;
@@ -308,7 +288,7 @@ body #cont
 
 #about ul
 {
-	/*float: left;*/
-	/*position: relative;*/
-	/*width: 100%;*/
+	float: left;
+	position: relative;
+	width: 100%;
 }
