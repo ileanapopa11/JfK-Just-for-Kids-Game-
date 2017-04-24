@@ -14,21 +14,21 @@
 	<div id="jfk">
 		<header>
 			<div class="center">
-				<a href="/" title="Parent's Page for JFK" class="logo">MW</a>
+				<a href="/" title="Parent's Page for JFK" class="logo"><img src="assets/img/logo5.png" alt="logo"></a>
 			
 			<nav>
 				<ul>
-					<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
-					<li><a href="#" class=""><span><i class="fa fa-graduation-cap" aria-hidden="true"></i>Avantaje</span></a></li>
-					<li><a href="#"><span><i class="fa fa-user-plus" aria-hidden="true"></i>Creare cont copil</span></a></li>
-					<li><a href="#"><span><i class="fa fa-child" aria-hidden="true"></i>Evolutie</span></a></li>
-					<li><a href="#"><span><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Sugestii</span></a></li>
+					<li id="h"><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
+					<li id="a"><a class=""><span><i class="fa fa-graduation-cap" aria-hidden="true"></i>Avantaje</span></a></li>
+					<li id="c"><a><span><i class="fa fa-user-plus" aria-hidden="true"></i>Creare cont copil</span></a></li>
+					<li id="e"><a ><span><i class="fa fa-child" aria-hidden="true"></i>Evolutie</span></a></li>
+					<li id="s"><a><span><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Sugestii</span></a></li>
 					<li id="click"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectare</span></a></li>
 				</ul>
 			</nav>
 			<!-- <div id="deconectare">-->
 			<div class="middle">
-				<h2>Bun venit!</h2>
+				<h2>Bine ai venit!</h2>
 				<h1>Cei 3 Muschetari<br/>...de pe WWW</h1>
 				<button>CE MAI E NOU?</button>	
 			</div> 
@@ -121,24 +121,24 @@
 						</div>
 					</li>
 					<li class="evol-item">
-							<figure id="invatacei" class="evol-image">
-								<img src="assets/img/niv6.png">
+							<figure class="evol-image">
+								<img src="assets/img/niv6.png" alt="6">
 							</figure>
 							<div class="evol-description">
 								<h6>Matematică</h6>
 							</div>
 					</li>
 					<li class="evol-item">
-							<figure id="invatacei" class="evol-image">
-								<img src="assets/img/niv0.png">
+							<figure class="evol-image">
+								<img src="assets/img/niv0.png" alt="0">
 							</figure>
 							<div class="evol-description">
 								<h6>Muzică</h6>
 							</div>
 					</li>
 					<li class="evol-item">
-							<figure id="invatacei" class="evol-image">
-								<img src="assets/img/niv8.png">
+							<figure class="evol-image">
+								<img src="assets/img/niv8.png" alt="8">
 							</figure>
 							<div class="evol-description">
 								<h6>Mediu înconjurător</h6>
@@ -152,24 +152,24 @@
 						</div>
 					</li>
 					<li class="evol-item">
-							<figure id="invatacei" class="evol-image">
-								<img src="assets/img/niv9.png">
+							<figure class="evol-image">
+								<img src="assets/img/niv9.png" alt="9">
 							</figure>
 							<div class="evol-description">
 								<h6>Matematică</h6>
 							</div>
 					</li>
 					<li class="evol-item">
-							<figure id="invatacei" class="evol-image">
-								<img src="assets/img/niv8.png">
+							<figure class="evol-image">
+								<img src="assets/img/niv8.png" alt="8">
 							</figure>
 							<div class="evol-description">
 								<h6>Muzică</h6>
 							</div>
 					</li>
 					<li class="evol-item">
-							<figure id="invatacei" class="evol-image">
-								<img src="assets/img/niv0.png">
+							<figure class="evol-image">
+								<img src="assets/img/niv0.png" alt="0">
 							</figure>
 							<div class="evol-description">
 								<h6>Mediu înconjurător</h6>
@@ -193,3 +193,18 @@
 	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+	document.getElementById("a").onclick=function(){
+		window.location="#avantaje";
+	};
+	document.getElementById("c").onclick=function(){
+		window.location="#cont";
+	};
+	document.getElementById("e").onclick=function(){
+		window.location="#evol";
+	};
+	document.getElementById("s").onclick=function(){
+		window.location="#sugestii";
+	};
+</script>
