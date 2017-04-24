@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title>Just For Kids</title>
-	<link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+	<link rel="icon" type="image/x-icon" href="assets/img/logo.png">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- diacritice -->
 	<script type= "text/javascript" src="assets/js/javascrips.js" ></script>
 </head>
 <body>
@@ -19,10 +22,17 @@
 			<nav>
 				<ul>
 					<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasa</span></a></li>
-					<li><a href="#"><span><i class="fa fa-info" aria-hidden="true"></i>Despre noi</span></a></li>
+					<li id="despre"><a><span><i class="fa fa-info" aria-hidden="true"></i>Despre noi</span></a></li>
 					<li id="click"><a href="#"><span><i class="fa fa-sign-in" aria-hidden="true"></i>Conectare</span></a></li>
 				</ul>
 			</nav>
+
+			<script type="text/javascript">
+					document.getElementById("despre").onclick = function ()
+					{
+	    				window.location = "#about";
+					};
+				</script>
 			
 			<div id="conectare">
 				<form id= "formular" method="post" action="http://localhost:8181/assets/php/logare.php">
@@ -62,9 +72,14 @@
 			</div>
 		</header>
 
+		<section id="about">
+			<h3>Cine suntem noi?</h3>
+		
+		</section>
+
 		<section id="signup">
-			<h3>Creeaza-ti cont</h3>
-			<form id="cont" method="post" action="http://localhost/TW/assets/php/inregistrare.php">
+			<h3>Creează-ți cont</h3>
+			<form id="cont" method="post" action="">
 				<div id="email-signup">
 					<i class="fa fa-envelope-o" aria-hidden="true"></i>
 					<input type="text" name="email" placeholder="E-mail">
@@ -83,13 +98,21 @@
 					<i class="fa fa-shield" aria-hidden="true"></i>
 					<input type="password" name="Parolaconf" placeholder="Confirmare Parola">
 				</div>
-				<button>Conectare</button>
+				<div><input id="connectButton" type="submit" name="Conectare" value="Conectare"></div>
+				<div>
+					<button class = "social">
+						<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						Facebook
+					</button>
+					<button class = "social">
+						<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+						Google
+					</button>
+				</div>
+				
 			</form>
 		</section>
 		
-		<section id="team"></section>
-		<section id="logos"></section>
-		<section id="contact"></section>
 		<footer></footer>
 	</div>
 
