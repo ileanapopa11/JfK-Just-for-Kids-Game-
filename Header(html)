@@ -1,0 +1,30 @@
+<div class="sticky-header">
+         <div class="center">
+               <a href="index.html" title="Cei trei Muschetari" class="logo">
+                      <div class="logo3m">
+                      <img  src="assets/img/logo5.png" alt="CEI TREI MUSCHETARI LOGO">
+                      </div>
+               </a>
+               
+               <nav>
+                  <ul>
+                     <li><a href="#"><span>Acasă</span></a></li> <!-- <a href="#" class="active"> -->
+                     <li><a href="#"><span>Învață</span></a></li>
+                     <li><a href="#"><span>Portofiu</span></a></li>
+                     <li><a href="#"><span>Despre</span></a></li>
+                     <li><a href="#"><span>Contact</span></a></li>
+                  </ul>
+               </nav>
+         </div>
+ </div>
+ 
+ <header>
+  <div class="center">
+      <div class="middle">
+       <h2>Bine ai venit!</h2>
+            <h1>CEI TREI MUSCHETARI</h1>
+            <a href="poveste.html"><button>POVESTE</button></a> 
+      </div>
+   </div>
+ </header>
+      
