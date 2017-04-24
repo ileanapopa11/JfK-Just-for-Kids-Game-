@@ -13,26 +13,26 @@ body {
 	width: 940px;
 }
 
-section h3 {
-	color: #333;
+section h3{
+	color: #FED136;
 	float: left;
 	font-family: 'Palanquin Dark', sans-serif;
 	font-size: 40px;
 	font-weight: bold;
-	margin-bottom: 20px;
-	margin-top: 120px;
+	margin-bottom: 10px;
+	margin-top: 80px;
 	text-align: center;
 	text-transform: uppercase;
 	width: 100%;
 }
 
-section h4 {
-	color: #666;
+section h4{
+	color: #FED136;
 	float: left;
 	font-family: 'PT Serif', serif;
 	font-size: 16px;
 	font-style: italic;
-	margin-top: 24px;
+	margin-top: 10px;
 	text-align: center;
 	width: 100%;
 
@@ -153,7 +153,7 @@ header .middle button {
 	border-radius: 5px;
 	color: white;
 	cursor: pointer;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Palanquin Dark', sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	height: 65px;
@@ -173,6 +173,8 @@ header .middle button:hover {
 	width: 21%;
 	float: left;
 	border-radius: 5px;
+	margin-top: 100px;
+	position: fixed;
 }
 .right {
 	margin-right: 4%;
@@ -187,7 +189,7 @@ header .middle button:hover {
 	padding-left: 0;
 }
 #viz nav span{
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Palanquin Dark',sans-serif;
 	font-size: 28px;
 	color: #001a33;
 	padding: 2px;
@@ -217,22 +219,23 @@ header .middle button:hover {
 	text-decoration: underline;
 }
 
-#viz h3{
-	font-family: 'Montserrat', sans-serif;
+/*#viz h3{
+	font-family: 'Palanquin Dark', sans-serif;
 	font-size: 55px;
 	color: #FED136;
 	margin-bottom: 5px;
 	margin-top: 80px;
 }
 #viz h4{
-	font-family: 'Droid Serif', serif;
+	font-family: 'PT Serif', serif;
 	font-size: 20px;
 	color: #FED136;
 	margin-top: 5px;
 	margin-bottom: 10px;
-}
+}*/
 #viz h4 i{
 	color: #FED136;
+	padding: 5px;
 }
 #viz .viz-list{
 	margin-top: 50px;
@@ -288,7 +291,7 @@ header .middle button:hover {
     color: #FED136;
 }
 .viz-image-text h6{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Palanquin Dark', sans-serif;
 	font-size: 50px;
 	border: 2px solid #DCAD62;
 	display: none;
@@ -318,10 +321,68 @@ header .middle button:hover {
     color: #001a33;
     font-weight: bold;
 }
-#viz form input[type=submit]{
+body input[type=submit]{
+	cursor: pointer;
 	background-color: #FED136;
 	color: #001a33;
 	font-weight: bold;
 	text-transform: uppercase;
+	border: 2px solid #FED136;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+
+/*#mod .modificare{
+	border-bottom: 3px solid #FED135;
+}*/
+#mod, #mod #at, #mod #st{
+	width: 100%;
+	float:left;
+}
+#mod h5{
+	color: #FED136;
+	float: left;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 30px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: normal;
+	/*text-transform: uppercase;*/
+	width: 100%;
+}
+#mod form{
+	border: 3px dashed #FED136;
+    padding: 20px 0px;
+    border-radius: 12px;
+    margin: 17px 0px;
+}
+#at, #st{
+	display: block;
+	text-align: center;
+}
+#at div, #st div{
+	padding: 10px;
+}
+#mod i{
+	padding-right: 5px;
+	padding-left: 15px;
+	color: #FED136;
+}
+#mod p{
+	color: #FED136;
+	font-family: 'PT Serif', serif;
+}
+#mod .modificare input{
+	border: 2px solid #FED136;
+    border-radius: 5px;
+    color: #001a33;
+    font-weight: bold;
+}
+#mod #at input{
+	width: 40%;
+}
+#mod #st input{
+	width: 25%;
 }
 

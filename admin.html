@@ -17,10 +17,8 @@
 			
 			<nav>
 				<ul>
-					<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
-					<li><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i>Vizualizare</span></a></li>
-					<li><a href="#"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Modificare</span></a></li>
-					<li id="click"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectare</span></a></li>
+					<li><a href="#" class=""><span><i class="fa fa-key" aria-hidden="true"></i>Schimbă parola</span></a></li>
+					<li id="click"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectează-mă</span></a></li>
 				</ul>
 			</nav>
 			<!-- <div id="deconectare">-->
@@ -33,7 +31,7 @@
 		</header>
 
 
-		<div id="viz">
+		<section id="viz">
 			<!-- <div class="center"> -->
 				<div class="left">
 					<nav>
@@ -59,13 +57,12 @@
 						<li class="viz-item">
 							<a id="print" href="#">
 								<figure id="invatacei" class="viz-image">
-									<img src="assets/img/viz-1.jpg">
+									<img src="assets/img/viz-1.jpg" alt="copii">
 									<div class="viz-image-text">
 									<h6>Învăţăcei</h6>
 									</div>
 								</figure>
 								<div class="viz-description">
-									<h6>Învăţăcei</h6>
 									<p>Utilizatorii elevi</p>
 								</div>
 							</a>
@@ -80,13 +77,12 @@
 						<li class="viz-item">
 							<a href="#">
 								<figure class="viz-image">
-									<img src="assets/img/viz-2.jpg">
+									<img src="assets/img/viz-2.jpg" alt="parinti">
 									<div class="viz-image-text">
 									<h6>Părinţi</h6>
 									</div>
 								</figure>
 								<div class="viz-description">
-									<h6>Părinţi</h6>
 									<p>Utilizatorii tutori</p>
 								</div>
 							</a>
@@ -94,13 +90,12 @@
 						<li class="viz-item">
 							<a href="#">
 								<figure class="viz-image">
-									<img src="assets/img/viz-3.jpg">
+									<img src="assets/img/viz-3.jpg" alt="teste">
 									<div class="viz-image-text">
 									<h6>Teste</h6>
 									</div>
 								</figure>
 								<div class="viz-description">
-									<h6>Teste</h6>
 									<p>Testele introduse</p>
 								</div>
 							</a>
@@ -111,19 +106,83 @@
 							<input type="text" name="select">
 							<input type="submit" value="Trimite">
 						</form>
-						</div>
 				</div>
-			<!-- </div> -->
-		</div>
+		</section>
 
 		<section id="mod">
+			<div class="left">
+				
+			</div>
 			<div class="right">
 				<h3>Modificare</h3>
+				<div class="modificare">
+					<h5>Adăugare test</h5>
+					<form id="at">
+						<div>
+							<p>(matematica/muzica/mediul)</p>
+							<i class="fa fa-list" aria-hidden="true"></i>
+							<input type="text" name="domeniu" placeholder="Domeniu">
+						</div>
+						<div>
+							<i class="fa fa-question-circle" aria-hidden="true"></i>
+							<input type="text" name="intrebare" placeholder="Intrebare1">	
+							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+							<input type="text" name="raspuns" placeholder="Raspuns1">
+						</div>
+						<div>
+							<i class="fa fa-question-circle" aria-hidden="true"></i>
+							<input type="text" name="intrebare" placeholder="Intrebare2">
+							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+							<input type="text" name="raspuns" placeholder="Raspuns2">
+						</div>
+						<div>
+							<i class="fa fa-question-circle" aria-hidden="true"></i>
+							<input type="text" name="intrebare" placeholder="Intrebare3">
+							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+							<input type="text" name="raspuns" placeholder="Raspuns3">
+						</div>
+						<div>
+							<input type="submit" value="Trimite">
+						</div>
+					</form>
+				</div>
+				<div class="modificare">
+					<h5>Ștergere test</h5>
+					<form id="st">
+						<div>
+							<p>(matematica/muzica/mediul)</p>
+							<i class="fa fa-list" aria-hidden="true"></i>
+							<input type="text" name="domeniu" placeholder="Domeniu">
+						</div>
+						<div>
+						<i class="fa fa-search" aria-hidden="true"></i>
+							<input type="text" name="id" placeholder="Id-ul testului">
+						</div>
+						<div>
+							<input type="submit" value="Trimite">
+						</div>
+					</form>
+				</div>
+				<div class="modificare">
+					<h5>Ștergere utilizator</h5>
+					<form id="st">
+						<div>
+						<p>
+							Odata cu stergerea contului unui parinte, se sterg automat din baza de date toate conturile copiilor acestuia.<br>
+							Daca se sterg toate conturile copiilor unui parinte, nu se sterge din baza de date si contul parintelui.
+						</p>
+						<i class="fa fa-search" aria-hidden="true"></i>
+							<input type="text" name="id" placeholder="Id-ul utilizatorului">
+						</div>
+						<div>
+							<input type="submit" value="Trimite">
+						</div>
+					</form>
+				</div>
 			</div>
-			
 		</section>
+		</div>
 		<footer></footer>
-	</div>
 
 </body>
 </html>
