@@ -1,0 +1,9 @@
+<!-- Primele doua linkuri de mai jos aduc doua fonturi care suporta diacritice de pe Google fonts.
+Fonturile vor fi folosite dupa cum urmeaza: 
+1. 'Palanquin Dark' Titlurile mari 
+2. 'PT Serif' Subtitlurile -->
+
+<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- diacritice -->
