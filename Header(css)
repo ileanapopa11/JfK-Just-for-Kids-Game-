@@ -1,0 +1,119 @@
+/*HEADER*/
+header{
+   background-image: url("../img/photo3Mback.png");
+   background-attachment: fixed;  /*paralax*/
+   float: left;
+   height: 100vh;
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+}
+
+header .center {
+   display: table;
+   height: 100vh;
+   position:relative;
+}
+
+.sticky-header{
+   z-index: 1;
+   position: fixed;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.9);
+}
+
+.sticky-header .logo {
+   float: left;
+   padding-top: 10px;
+   cursor: pointer;
+}
+
+.logo3m {
+   max-height: 53px;
+   overflow: hidden;
+}
+
+.logo3m img {
+   height: 50px;
+}
+
+.sticky-header nav {
+   float: right;
+} 
+
+.sticky-header nav ul {
+   list-style: none;
+   padding-left: 0;
+}
+
+.sticky-header nav li {
+   display: inline; 
+}
+
+.sticky-header nav a {
+   color: white;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   line-height: 41px;
+   padding: 3px 3px 3px 35px;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.sticky-header nav a span {
+   border-bottom: 2px solid transparent;
+   padding-bottom: 5px;
+   transition: border .2s;
+}
+
+.sticky-header nav a:hover span,
+.sticky-header nav a.active span {
+   border-bottom: 2px solid #FED136;
+}
+
+header .middle{
+   display: table-cell;
+   width: 100%;
+   text-align: center;
+   vertical-align:middle;
+} 
+
+h1 {
+   color: white;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 75px;
+   font-weight: bold;
+   margin: 0 auto;
+   text-transform: uppercase;
+}
+
+h2 {
+   color: white;
+   font-family: 'Droid Serif', serif;
+   font-size: 27px;
+   font-weight: normal;
+}
+
+header .middle button {
+   background-color: #FED136;
+   border: 0;
+   border-radius: 5px;
+   color: white;
+   cursor: pointer;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+   height: 65px;
+   margin-top: 30px;
+   transition: background-color .2s, color .6s;
+   width: 240px;
+}
+
+header .middle button:hover {
+   background-color: #FFF;
+   color: #FED136;
+
+}
+
+
