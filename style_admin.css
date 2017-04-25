@@ -132,7 +132,7 @@ header .middle{
 
 h1 {
 	color: white;
-	font-family: 'PT Serif', serif;
+	font-family: 'Montserrat', sans-serif;
 	/*font-family: 'Montserrat', sans-serif;*/
 	font-size: 70px;
 	font-weight: bold;
@@ -142,7 +142,7 @@ h1 {
 
 h2 {
 	color: white;
-	font-family: 'Palanquin Dark', serif;
+	font-family: 'PT Serif', serif;
 	font-size:50px ;
 	font-weight: normal;
 }
@@ -173,7 +173,7 @@ header .middle button:hover {
 	width: 21%;
 	float: left;
 	border-radius: 5px;
-	margin-top: 100px;
+	margin-top: 80px;
 	position: fixed;
 }
 .right {
@@ -321,7 +321,7 @@ header .middle button:hover {
     color: #001a33;
     font-weight: bold;
 }
-body input[type=submit]{
+body input[type=submit], body button{
 	cursor: pointer;
 	background-color: #FED136;
 	color: #001a33;
@@ -335,11 +335,15 @@ body input[type=submit]{
 /*#mod .modificare{
 	border-bottom: 3px solid #FED135;
 }*/
-#mod, #mod #at, #mod #st{
+#mod, #mod #at, #mod #st, #mod #su{
 	width: 100%;
 	float:left;
 }
-#mod h5{
+#fb, #fb #mail, #fb #fbu{
+	width: 100%;
+	float:left;
+}
+#mod h5, #fb h5{
 	color: #FED136;
 	float: left;
 	font-family: 'Palanquin Dark', sans-serif;
@@ -351,38 +355,43 @@ body input[type=submit]{
 	/*text-transform: uppercase;*/
 	width: 100%;
 }
-#mod form{
+#mod form, #fb form{
 	border: 3px dashed #FED136;
     padding: 20px 0px;
     border-radius: 12px;
     margin: 17px 0px;
 }
-#at, #st{
+#at, #st, #su, #mail, #fbu{
 	display: block;
 	text-align: center;
 }
-#at div, #st div{
+#at div, #st div, #su div, #mail div{
 	padding: 10px;
 }
-#mod i{
+#mod i, #fb i{
 	padding-right: 5px;
 	padding-left: 15px;
 	color: #FED136;
 }
-#mod p{
+#mod p, #fb p{
 	color: #FED136;
 	font-family: 'PT Serif', serif;
 }
-#mod .modificare input{
+#mod .modificare input, #fb .feedback input{
 	border: 2px solid #FED136;
     border-radius: 5px;
     color: #001a33;
     font-weight: bold;
 }
-#mod #at input{
+#mod #at input[type="text"], #fb #mail input[type="text"]{
 	width: 40%;
 }
-#mod #st input{
+#mod #st input[type="text"], #mod #su input[type="text"]{
 	width: 25%;
 }
-
+#fb #fbu{
+	padding-bottom: 20px;
+	border: 3px dashed #FED136;
+    border-radius: 12px;
+    margin: 17px 0px;
+}

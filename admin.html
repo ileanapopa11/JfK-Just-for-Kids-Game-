@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- diacritice -->
+	<link rel="icon" type="image/x-icon" href="assets/img/logo5.png">
 </head>
 <body>
 
@@ -46,6 +47,9 @@
 						<li><a href="#"><span><i class="fa fa-minus-circle" aria-hidden="true"></i>Ștergere test</span></a></li>
 						<li><a href="#"><span><i class="fa fa-check-circle" aria-hidden="true"></i>Modificare test</span></a></li>
 						<li><a href="#"><span><i class="fa fa-ban" aria-hidden="true"></i>Ștergere utilizator</span></a></li>
+						<li><span>Feedback</span></li>
+						<li><a href="#"><span><i class="fa fa-share" aria-hidden="true"></i>De la utilizatori</span></a></li>
+						<li><a href="#"><span><i class="fa fa-reply" aria-hidden="true"></i>Pentru utilizatori</span></a></li>
 					</ul>
 					</nav>
 				</div>
@@ -110,9 +114,7 @@
 		</section>
 
 		<section id="mod">
-			<div class="left">
-				
-			</div>
+			<div class="left"></div>
 			<div class="right">
 				<h3>Modificare</h3>
 				<div class="modificare">
@@ -122,6 +124,11 @@
 							<p>(matematica/muzica/mediul)</p>
 							<i class="fa fa-list" aria-hidden="true"></i>
 							<input type="text" name="domeniu" placeholder="Domeniu">
+						</div>
+						<div>
+							<p>(usor/mediu/greu)</p>
+							<i class="fa fa-level-up" aria-hidden="true"></i>
+							<input type="text" name="dificultate" placeholder="Dificultate">
 						</div>
 						<div>
 							<i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -142,6 +149,11 @@
 							<input type="text" name="raspuns" placeholder="Raspuns3">
 						</div>
 						<div>
+						<div>
+							<p>Link-ul sugerat pentru rezolvare (optional)</p>
+							<i class="fa fa-external-link" aria-hidden="true"></i>
+							<input type="text" name="link" placeholder="Link">
+						</div>
 							<input type="submit" value="Trimite">
 						</div>
 					</form>
@@ -165,14 +177,42 @@
 				</div>
 				<div class="modificare">
 					<h5>Ștergere utilizator</h5>
-					<form id="st">
+					<form id="su">
 						<div>
 						<p>
-							Odata cu stergerea contului unui parinte, se sterg automat din baza de date toate conturile copiilor acestuia.<br>
-							Daca se sterg toate conturile copiilor unui parinte, nu se sterge din baza de date si contul parintelui.
+							Odată cu ştergerea contului unui părinte, se şterg automat din baza de date toate conturile copiilor acestuia.<br>
+							Dacă se şterg toate conturile copiilor unui părinte, nu se şterge din baza de date şi contul părintelui.
 						</p>
 						<i class="fa fa-search" aria-hidden="true"></i>
 							<input type="text" name="id" placeholder="Id-ul utilizatorului">
+						</div>
+						<div>
+							<input type="submit" value="Trimite">
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section id="fb">
+			<div class="right">
+				<h3>Feedback</h3>
+				<div class="feedback">
+					<h5>Feedback de la utilizatori</h5>
+					<div id="fbu">
+					<p>Sugestii primite de la părinţi: link-uri pentru conceperea testelor</p>
+					<button>Vezi sugestiile</button>
+					</div>
+				</div>
+				<div class="feedback">
+					<h5>Feedback pentru utilizatori</h5>
+					<form id="mail">
+						<div>
+							<i class="fa fa-search" aria-hidden="true"></i>
+								<input type="text" name="id" placeholder="Id-ul utilizatorului">
+						</div>
+						<div>
+							<i class="fa fa-commenting" aria-hidden="true"></i>
+								<input type="text" name="comentarii" placeholder="Comentarii">
 						</div>
 						<div>
 							<input type="submit" value="Trimite">
