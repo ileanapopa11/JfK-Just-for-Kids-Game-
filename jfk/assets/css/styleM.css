@@ -1,0 +1,410 @@
+/*GENERAL STYLE*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700');
+
+body {
+   margin: 0;
+}
+
+.center {
+   margin: 0 auto;
+   width: 940px;
+}
+
+section h3 {
+   color: #333;
+   float: left;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 40px;
+   font-weight: bold;
+   margin-bottom: 0;
+   margin-top: 100px;
+   text-align: center;
+   text-transform: uppercase;
+   width: 100%;
+}
+
+#muschetar h3 {
+  margin-top: 150px;
+}
+
+section h4 {
+   color: #667;
+   float: left;
+   font-family: 'PT Serif', serif;
+   font-size: 16px;
+   font-style: italic;
+   margin-top: 24px;
+   text-align: center;
+   width: 100%;
+}
+
+/*STICKY HEADER*/
+
+.sticky-header{
+   z-index: 1;
+   position: fixed;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.9);
+}
+
+.sticky-header .logo {
+   float: left;
+   padding-top: 10px;
+   cursor: pointer;
+}
+
+.logo3m {
+   max-height: 53px;
+   overflow: hidden;
+   margin-left: 5px;
+}
+
+.logo3m img {
+   height: 50px;
+}
+
+.sticky-header nav {
+   float: right;
+} 
+
+.sticky-header nav ul {
+   list-style: none;
+   padding-left: 0;
+}
+
+.sticky-header nav li {
+   display: inline;
+}
+
+.sticky-header nav a {
+   color: white;
+   cursor: pointer;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 14px;
+   line-height: 41px;
+   padding: 3px 3px 3px 35px;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.sticky-header nav a span {
+   border-bottom: 2px solid transparent;
+   padding-bottom: 5px;
+   transition: border .2s;
+}
+
+.sticky-header nav a:hover span,
+.sticky-header nav a.active span {
+   border-bottom: 2px solid #FED136;
+}
+
+header .middle{
+   display: table-cell;
+   width: 100%;
+   text-align: center;
+   vertical-align:middle;
+} 
+
+/*MUSCHETAR TEXT*/
+#muschetar{
+   float: left;
+   width: 100%;
+   position: relative;
+}
+
+#muschetar p 
+{
+   color: #333;
+   font-size: 18px;
+   font-family: "PT Sans";
+   text-align: justify;
+   margin: 0;
+   padding: 0 10px;
+} 
+
+#muschetar p i
+{
+   color: #FF3333;
+   font-size: 38px;
+   font-family: Aladin;
+   font-style: bold;
+}
+
+#muschetar img
+{
+   border-color: #000;
+   border: solid 7px;
+   margin: 20px;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+/*JOCURI*/
+
+#jocuri{
+   background-color: White;
+}
+
+#jocuri,
+#jocuri .jocuri-list
+{
+   float: left;
+   width: 100%;
+}
+
+#jocuri .jocuri-list
+{
+   padding-left: 0;
+   margin-bottom: 0;
+   list-style: none;
+}
+
+#jocuri .jocuri-list .jocuri-item
+{
+   float: left;
+   width: 100%;
+   /*margin-right: 5%;*/
+   margin-bottom: 2%;
+   text-align: center;
+   transition: box-shadow .2s ease;
+}
+
+.jocuri-item a
+{
+   text-decoration: none;
+}
+
+.jocuri-item:hover
+{
+   box-shadow: 10px 10px 19px IndianRed; 
+}
+
+.jocuri-image
+{
+   margin: 0;
+   width: 100%;
+   height: 100px;
+   position: relative;
+   overflow: hidden;
+}
+
+.jocuri-image img
+{
+   width: 100%;
+   transition: opacity .1s ease, transform .5s ease;
+}
+
+.jocuri-image-text
+{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    
+}
+
+.jocuri-image-text h6
+{
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 30px;
+   color: White; /* solid rgb(220, 173,98)*/
+   border: 2px solid White;
+   display: none;
+   transition: display .2s;
+}
+
+.jocuri-item:hover .jocuri-image-text h6
+{
+   display: block;
+}
+
+.jocuri-item:hover .jocuri-image img
+{
+   opacity: 0.8;
+   transform: scale(1.1);
+}
+
+
+.jocuri-description
+{
+   background-color: #e65041;
+   padding: 5px 0px;
+}
+
+.jocuri-description h6
+{
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 18px;
+   color: White;
+   text-transform: uppercase;
+   margin: 0 auto;
+   padding: 10px;
+}
+
+/*COLEGI*/
+
+#colegi
+{
+   float: left;
+   width: 100%;
+   position: relative;
+}
+
+#colegi .line
+{
+   width: 4px;
+   height: 100px;
+   background-color: Black;
+   position: absolute;
+   left: 50%;
+   float: left;
+   top: 500px;
+}
+
+#colegi .line2
+{
+   width: 4px;
+   height: 100px;
+   background-color: Black;
+   position: absolute;
+   left: 50%;
+   float: left;
+   top: 765px;
+}
+
+#colegi .timeline
+{
+   padding: 0;
+   list-style: none;
+   width: 600px;
+   margin-top: 80px;
+   float: left;
+}
+
+#colegi .timeline > li
+{
+   float: left;
+   transform: translateX(0px);
+   margin-bottom: 92px;
+}
+
+#colegi .timeline > li .description
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   color: #777;
+}
+
+#colegi .timeline > li .description strong
+{
+   font-size: 18px;
+   color: #222;
+}
+
+#colegi .timeline >li:nth-child(even) 
+{
+   transform: translateX(380px);
+}
+
+#colegi .timeline >li:nth-child(even) .description
+{
+   float: right; 
+}
+
+#colegi .timeline >li:nth-child(even) .figure
+{
+   float: left; 
+}
+
+#colegi .timeline >li:nth-child(odd)
+{
+   text-align: right;
+} 
+
+#colegi .timeline >li:nth-child(odd) .figure
+{
+   margin-left: 20px;
+}
+
+#colegi .timeline figure
+{
+   width: 166px;
+   height: 166px;
+   border-radius: 50%;
+   overflow: hidden;
+   border-color: #000;
+   border: solid 7px;
+   float: right;
+   margin: 0;
+   cursor: pointer;
+}
+
+#colegi .timeline .timeline-item:first-child figure:hover
+{
+   box-shadow: 10px 10px 19px IndianRed; /*black shadow -> rgba(0, 0, 0, 0.13)*/
+}
+
+#colegi .timeline .timeline-item:nth-child(2) figure:hover
+{
+   box-shadow: 10px 10px 19px Yellow; /*black shadow -> rgba(0, 0, 0, 0.13)*/
+}
+
+#colegi .timeline .timeline-item:nth-child(3) figure:hover
+{
+   box-shadow: 10px 10px 19px LightSeaGreen; /*black shadow -> rgba(0, 0, 0, 0.13)*/
+}
+
+#colegi .timeline .description
+{
+   float: left;
+   width: 380px;
+}
+/*
+.description p 
+{
+   text-align: right;
+}
+*/
+/*MAIN*/
+
+#main {
+  background-color: LightCyan;
+  margin: 0;
+  padding: 40px;
+}
+
+.value-props {
+  margin: 40px auto;
+  width: 60%;
+}
+
+.prop {
+  
+  border: 7px solid #000;
+  padding: 40px 0px;
+  margin: 5px 0px;
+}
+
+/*
+  width: 166px;
+  height: 166px;
+  border-radius: 50%;
+  overflow: hidden;
+  border-color: #000;
+  border: solid 7px;
+  float: right;
+  margin: 5px, 0px;
+  padding: 40px, 0px;
+  */
+}
+
+.prop h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+}
+
+.partner, .prop{
+  text-align: center;
+}

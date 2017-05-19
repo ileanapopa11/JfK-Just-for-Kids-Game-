@@ -1,0 +1,397 @@
+/*GENERAL STYLES*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Mouse+Memoirs');
+
+body {
+	margin: 0;
+	background-color: #142739;
+}
+
+.center {
+	margin: 0 auto;
+	width: 940px;
+}
+
+section h3{
+	color: #FED136;
+	float: left;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+section h4{
+	color: #FED136;
+	float: left;
+	font-family: 'PT Serif', serif;
+	font-size: 16px;
+	font-style: italic;
+	margin-top: 10px;
+	text-align: center;
+	width: 100%;
+
+
+}
+
+/*HEADER*/
+header{
+	background-image: url("../img/backgroundAdmin.jpg");
+	float: left;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+}
+
+header .center {
+	display: table;
+	height: 100vh;
+	position:relative;
+}
+
+header .logo {
+	position: absolute;
+	padding-top: 20px;
+	cursor: pointer;
+}
+header .logo {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 25px;
+	color: #FED136;
+	text-decoration: none;
+}
+
+header nav {
+	float: right;
+	position: absolute;
+	right: 0;
+} 
+
+header nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+header nav li {
+	display: inline;
+	
+}
+
+header nav li i
+{
+	/*border: 2px solid white;*/
+	/*border-radius: 100%;*/
+	color: white;
+	display: table-cell;
+	font-size: 45px;
+	padding: 5px;
+	text-align: center;
+	/*vertical-align: top;*/
+}
+
+header nav a {
+	color: white;
+	cursor: pointer;
+	font-family: 'Palanquin Dark',sans-serif;
+	font-size: 14px;
+	line-height: 41px;
+	padding: 3px 3px 3px 35px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header nav a span {
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	transition: border .2s;
+}
+
+header nav a span i {
+	padding-left: 0;
+}
+
+header nav a:hover span,
+header nav a.active span {
+	border-bottom: 2px solid #FED136;
+}
+
+
+header .middle{
+	display: table-cell;
+	width: 100%;
+	text-align: center;
+	vertical-align:middle;
+} 
+
+h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-size: 70px;
+	font-weight: bold;
+	margin-bottom: 0;
+	/*text-transform: uppercase;*/
+}
+
+h2 {
+	color: white;
+	font-family: 'PT Serif', serif;
+	font-size:50px ;
+	font-weight: normal;
+}
+
+header .middle button {
+	background-color: #FED136;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	height: 65px;
+	margin-top: 60px;
+	transition: background-color .2s, color .6s;
+	width: 240px;
+}
+
+header .middle button:hover {
+	background-color: #FFF;
+	color: #FED136;
+}
+
+.left {
+	margin-left: 4%;
+	background-color: white;
+	width: 21%;
+	float: left;
+	border-radius: 5px;
+	margin-top: 80px;
+	position: fixed;
+}
+.right {
+	margin-right: 4%;
+	width: 63%;
+	float: right; 
+}
+#viz {
+	width: 100%;
+}
+#viz nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+#viz nav span{
+	font-family: 'Palanquin Dark',sans-serif;
+	font-size: 28px;
+	color: #001a33;
+	padding: 2px;
+	text-transform: uppercase;
+}
+#viz nav a {
+	cursor: pointer;
+	padding: 3px;
+	text-decoration: none;
+}
+#viz nav a span {
+	font-size: 21px;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: border .2s;
+	color: #001a33;
+	text-transform: none;
+}
+
+#viz nav a span i {
+	padding-left: 0;
+}
+#viz nav a span:hover{
+	text-decoration: underline;
+}
+
+/*#viz h3{
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 55px;
+	color: #FED136;
+	margin-bottom: 5px;
+	margin-top: 80px;
+}
+#viz h4{
+	font-family: 'PT Serif', serif;
+	font-size: 20px;
+	color: #FED136;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}*/
+#viz h4 i{
+	color: #FED136;
+	padding: 5px;
+}
+#viz .viz-list{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	float: left;
+	width: 100%;
+}
+#viz .viz-list{
+	padding-left: 0;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	list-style: none;
+}
+#viz .viz-list .viz-item{
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	text-align: center;
+	transition: box-shadow .2s ease;
+	background-color: white;
+}
+
+#viz .viz-list .viz-item:nth-child(3){
+	margin-right: 0;
+}
+.viz-item a{
+	text-decoration: none;
+}
+.viz-item:hover{
+	box-shadow: 0 10px 19px rgba(0,0,0,0.13);
+}
+.viz-image{
+	margin: 0;
+	width: 100%;
+	height: 155px;
+	position: relative;
+	background-color: #000;
+	overflow: hidden;
+}
+.viz-image img{
+	width: 100%;
+	height: auto;
+	transition: opacity .3s, transform .3s;
+}
+.viz-image-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #FED136;
+}
+.viz-image-text h6{
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 50px;
+	border: 2px solid #DCAD62;
+	display: none;
+	transition: display .3s;
+}
+.viz-item:hover .viz-image-text h6{
+	display: block;                                    /*runda1*/
+}
+.viz-item:hover .viz-image img{
+	opacity: 0.4;
+	transform: scale(1.15);
+}
+.viz-description{
+	font-size: 20px;
+	color: #001a33;
+}
+#viz span{
+	margin: 30px 20px 30px 20px;
+	font-size: 25px;
+	padding-left: 100px;
+	color: white;
+} 
+#viz form input[type=text]{
+	width: 80%;
+	border: 2px solid #FED136;
+    border-radius: 5px;
+    color: #001a33;
+    font-weight: bold;
+}
+body input[type=submit], body button{
+	cursor: pointer;
+	background-color: #FED136;
+	color: #001a33;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 2px solid #FED136;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+
+/*#mod .modificare{
+	border-bottom: 3px solid #FED135;
+}*/
+#mod, #mod #at, #mod #st, #mod #su{
+	width: 100%;
+	float:left;
+}
+#fb, #fb #mail, #fb #fbu{
+	width: 100%;
+	float:left;
+}
+#mod h5, #fb h5{
+	color: #FED136;
+	float: left;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 30px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: normal;
+	/*text-transform: uppercase;*/
+	width: 100%;
+}
+#mod form, #fb form{
+	border: 3px dashed #FED136;
+    padding: 20px 0px;
+    border-radius: 12px;
+    margin: 17px 0px;
+}
+#at, #st, #su, #mail, #fbu{
+	display: block;
+	text-align: center;
+}
+#at div, #st div, #su div, #mail div{
+	padding: 10px;
+}
+#mod i, #fb i{
+	padding-right: 5px;
+	padding-left: 15px;
+	color: #FED136;
+}
+#mod p, #fb p{
+	color: #FED136;
+	font-family: 'PT Serif', serif;
+}
+#mod .modificare input, #fb .feedback input{
+	border: 2px solid #FED136;
+    border-radius: 5px;
+    color: #001a33;
+    font-weight: bold;
+}
+#mod #at input[type="text"], #fb #mail input[type="text"]{
+	width: 40%;
+}
+#mod #st input[type="text"], #mod #su input[type="text"]{
+	width: 25%;
+}
+#fb #fbu{
+	padding-bottom: 20px;
+	border: 3px dashed #FED136;
+    border-radius: 12px;
+    margin: 17px 0px;
+}

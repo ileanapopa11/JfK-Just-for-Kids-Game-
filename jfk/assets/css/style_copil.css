@@ -1,0 +1,370 @@
+/*GENERAL STYLES*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700');
+
+body {
+   margin: 0;
+}
+
+.center {
+   margin: 0 auto;
+   width: 940px;
+}
+
+section h3 {
+   color: #333;
+   float: left;
+   font-family: 'Palanquin Dark', Arial;
+   font-size: 40px;
+   font-weight: bold;
+   margin-bottom: 0;
+   margin-top: 120px;
+   text-align: center;
+   text-transform: uppercase;
+   width: 100%;
+}
+
+section h4 {
+   color: #667;
+   float: left;
+   font-family: 'PT Serif', serif;
+   font-size: 16px;
+   font-style: italic;
+   margin-top: 24px;
+   text-align: center;
+   width: 100%;
+
+
+}
+
+/*HEADER*/
+header{
+   background-image: url("../img/background.png");
+   background-attachment: fixed;  /*paralax*/
+   float: left;
+   height: 100vh;
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+}
+
+header .center {
+   display: table;
+   height: 100vh;
+   position:relative;
+}
+
+.sticky-header{
+   z-index: 1;
+   position: fixed;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.9);
+}
+
+.sticky-header .logo {
+   float: left;
+   padding-top: 10px;
+   cursor: pointer;
+}
+
+.logo3m {
+   max-height: 53px;
+   overflow: hidden;
+   margin-left: 5px;
+}
+
+.logo3m img {
+   height: 50px;
+}
+
+.sticky-header nav {
+   float: right;
+} 
+
+.sticky-header nav ul {
+   list-style: none;
+   padding-left: 0;
+}
+
+.sticky-header nav li {
+   display: inline; 
+}
+
+.sticky-header nav a {
+   color: white;
+   cursor: pointer;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 14px;
+   line-height: 41px;
+   padding: 3px 3px 3px 35px;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.sticky-header nav a span {
+   border-bottom: 2px solid transparent;
+   padding-bottom: 5px;
+   transition: border .2s;
+}
+
+.sticky-header nav a:hover span,
+.sticky-header nav a.active span {
+   border-bottom: 2px solid #FED136;
+}
+
+header .middle{
+   display: table-cell;
+   width: 100%;
+   text-align: center;
+   vertical-align: middle;
+} 
+
+h1 {
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 75px;
+   font-weight: bold;
+   margin: 0 auto;
+   /*text-transform: uppercase;*/
+}
+
+h2 {
+   color: white;
+   font-family: 'PT Serif', serif;
+   font-size: 27px;
+   font-weight: normal;
+}
+
+header .middle button {
+   background-color: #FED136;
+   border: 0;
+   border-radius: 5px;
+   color: white;
+   cursor: pointer;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+   height: 65px;
+   margin-top: 50px;
+   transition: background-color .2s, color .6s;
+   width: 240px;
+}
+
+header .middle button:hover {
+   background-color: #FFF;
+   color: #FED136;
+
+}
+
+/*GAME PICKER*/
+
+#gamePicker{
+   background-color: White;
+}
+
+#gamePicker,
+#gamePicker .gamePicker-list
+{
+   float: left;
+   width: 100%;
+}
+
+#gamePicker .gamePicker-list
+{
+   padding-left: 0;
+   margin-bottom: 0;
+   list-style: none;
+}
+
+#gamePicker .gamePicker-list .gamePicker-item
+{
+   float: left;
+   width: 30%;
+   margin-right: 5%;
+   margin-bottom: 5%;
+   text-align: center;
+   transition: box-shadow .2s ease;
+}
+
+#gamePicker .gamePicker-list .gamePicker-item:nth-child(3n)
+/*#gamePicker .gamePicker-list .gamePicker-item:nth-child(6)*/
+{
+   margin-right: 0;
+}
+
+
+.gamePicker-item a
+{
+   text-decoration: none;
+}
+
+.gamePicker-item:hover
+{
+   box-shadow: 10px 10px 19px IndianRed; /*normal shadow -> rgba(0, 0, 0, 0.13)*/
+}
+
+.gamePicker-image
+{
+   margin: 0;
+   width: 100%;
+   height: 290px;
+   position: relative;
+   background-color: Crimson;
+   overflow: hidden;
+}
+
+.gamePicker-image img
+{
+   height: 100%;
+   transform: translateX(-17%);
+   transition: opacity .2s ease, transform .5s ease;
+}
+
+.gamePicker-image-text
+{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    
+}
+
+.gamePicker-image-text h6
+{
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 30px;
+   color: rgb(220, 173,98);
+   border: 2px solid rgb(220, 173,98);
+   display: none;
+   transition: display .2s;
+   text-transform: uppercase;
+}
+
+.gamePicker-item:hover .gamePicker-image-text h6
+{
+   display: block;
+}
+
+.gamePicker-item:hover .gamePicker-image img
+{
+   opacity: 0.4;
+   transform: scale(2);
+}
+
+/*AUX SECTION*/
+#aux{
+  float: left;
+  width: 100%;
+}
+
+/*CONTENT SLIDER*/
+
+.slider{
+   overflow: hidden;
+   height: 200px;
+}
+
+.slider figure div{
+   width: 20%;
+   float: left;
+}
+
+.slider figure img{
+   /*width: 100%;*/
+   width: 50%;
+   float: left;
+   padding-left: 25%;
+   cursor: pointer;
+}
+
+.slider figure{
+   position: relative;
+   width: 500%;
+   margin: 0;
+   left: 0;
+   animation: 50s mySlider infinite;
+}
+
+@keyframes mySlider{
+   0%{
+      left: 0%;
+   }
+
+   10%{
+      left: 0%;
+   }
+
+   12%{
+      left: -100%;
+   }
+
+   22%{
+      left: -100%;
+   }
+
+   24%{
+      left: -200%;
+   }
+
+   34%{
+      left: -200%;
+   }
+
+   36%{
+      left: -300%;
+   }
+
+   46%{
+      left: -300%;
+   }
+
+   48%{
+      left: -400%;
+   }
+
+   58%{
+      left: -400%;
+   }
+
+   60%{
+      left: -300%;
+   }
+
+   70%{
+      left: -300%;
+   }
+
+   72%{
+      left: -200%;
+   }
+
+   82%{
+      left: -200%;
+   }
+
+   84%{
+      left: -100%;
+   }
+
+   94%{
+      left: -100%;
+   }
+
+   96%{
+      left: 0%;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
