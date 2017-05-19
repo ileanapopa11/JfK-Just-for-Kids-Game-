@@ -8,7 +8,7 @@
 
 			if(is_null(self::$connection))
 			{ 
-				self::$connection = mysqli_connect('localhost','root', 'root','jfk');
+				self::$connection = mysqli_connect('localhost','root', '','jfk');
 			}
 			return self::$connection; //pt static
 		}
