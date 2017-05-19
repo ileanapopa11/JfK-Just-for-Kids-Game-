@@ -35,7 +35,7 @@
 				</script>
 			
 			<div id="conectare">
-				<form id= "formular" method="post" action="http://localhost:8181/assets/php/logare.php">
+				<form id= "formular" method="post" action="http://localhost:8181/jfk/assets/php/logare.php">
 					<div id="nume">
 						<label>E-mail</label>
 						<input type="text" name="email">
@@ -112,24 +112,24 @@
 
 		<section id="signup">
 			<h3>Creează-ți cont</h3>
-			<form id="cont" method="post" action="">
+			<form id="cont" method="post" action="http://localhost:8181/jfk/assets/php/inregistrare.php">
 				<div id="email-signup">
 					<i class="fa fa-envelope-o" aria-hidden="true"></i>
-					<input type="text" name="email" placeholder="E-mail">
+					<input type="text" name="email" placeholder="E-mail" required="required">
 				</div>
 				<div id="data_nastere-signup">
 					<i class="fa fa-birthday-cake" aria-hidden="true"></i>
-					<input type="text" name="zi" placeholder="Ziua">
-					<input type="text" name="luna" placeholder="Luna">
-					<input type="text" name="an" placeholder="Anul">
+					<input type="text" name="zi" placeholder="Ziua" required="required">
+					<input type="text" name="luna" placeholder="Luna" required="required">
+					<input type="text" name="an" placeholder="Anul" required="required">
 				</div>
 				<div id="parola-signup">
 					<i class="fa fa-key" aria-hidden="true"></i>
-					<input type="password" name="parola" placeholder="Parola">
+					<input type="password" name="parola" placeholder="Parola" required="required" pattern="[a-zA-z0-9]{7,}" onchange="form.parolaconf.pattern = this.value;">
 				</div>
 				<div id="parola_conf-signup">
 					<i class="fa fa-shield" aria-hidden="true"></i>
-					<input type="password" name="Parolaconf" placeholder="Confirmare Parola">
+					<input type="password" name="parolaconf" placeholder="Confirmare Parola" required="required" pattern="[a-zA-z0-9]{7,}">
 				</div>
 				<div><input id="connectButton" type="submit" name="Conectare" value="Conectare"></div>
 				<div>
