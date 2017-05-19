@@ -13,7 +13,6 @@ body {
 }
 section
 {
-	height: 100vh;
 	background-color: #571111;
 	border-bottom: 5px solid #FED136;
 }
@@ -21,13 +20,24 @@ section
 section h3 {
 	color: #FED136;
 	float: left;
-	font-family: 'Palaquin Dark', sans-serif;
+	font-family: 'Palanquin Dark', sans-serif;
 	font-size: 40px;
 	font-weight: bold;
 	margin-bottom: 20px;
 	margin-top: 90px;
 	text-align: center;
 	text-transform: uppercase;
+	width: 100%;
+}
+
+section h4 {
+	color: white;
+	float: left;
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+	font-style: italic;
+	margin-bottom: 50px;
+	text-align: center;
 	width: 100%;
 }
 
@@ -70,7 +80,7 @@ header nav li {
 header nav a {
 	color: white;
 	cursor: pointer;
-	font-family: 'Palaquin Dark',sans-serif;
+	font-family: 'Palanquin Dark',sans-serif;
 	font-size: 14px;
 	line-height: 40px;
 	padding: 3px 3px 3px 35px;
@@ -286,9 +296,75 @@ body #cont
 
 /*SECTION ABOUT*/
 
-#about ul
-{
+/*SECTION: ABOUT US*/
+#about {
 	float: left;
-	position: relative;
 	width: 100%;
+	/*padding-left: 50%;*/
+}
+
+
+#about .timeline {
+	padding: 0;
+	list-style: none;
+	margin-top: 30px;
+}
+
+#about .timeline > li {
+	float: left;
+	transform: translateX(-21px);
+	margin-bottom: 30px;
+}
+
+#about .timeline > li .description {
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+	color: white;
+	font-weight: normal;
+}
+
+#about .timeline > li .description strong {
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 22px;
+	color: #FED136;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#about .timeline > li:nth-child(even) {
+	transform: translateX(377px);
+}
+
+#about .timeline > li:nth-child(even) .description {
+	float: right;
+}
+
+#about .timeline > li:nth-child(even) figure {
+	float: left;
+	margin-right: 5px;
+}
+
+#about .timeline > li:nth-child(odd) {
+	text-align: right;
+}
+
+#about .timeline > li:nth-child(odd) figure {
+	margin-left: 5px;
+}
+
+#about .timeline figure {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	float: right;
+	margin: 0;
+}
+#about .timeline img{
+	width: 150px;
+	height: 150px;
+}
+
+#about .timeline .description {
+	float: left;
+	width: 400px;
 }
