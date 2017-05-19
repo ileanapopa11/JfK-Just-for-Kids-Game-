@@ -7,7 +7,7 @@
 	if(!empty($_POST))
 	{
 		$email = $_POST['email'];
-		$password = $_POST['pass'];
+		$password = $_POST['parola'];
 		$sql = "SELECT * FROM users WHERE username = '{$email}' AND password = '{$password}'";
 		$result = mysqli_query($connection, $sql);
 		if(!$result)
