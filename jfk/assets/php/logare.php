@@ -26,17 +26,17 @@
 
 			if($row["role"] == 'admin')
 			{
-				header('Location: http://localhost:8181/jfk/admin.html');
+				header('Location: http://localhost/jfk/admin.html');
 			}
 
 			if($row["role"] == 'child')
 			{
-				header('Location: http://localhost:8181/jfk/copil.html');
+				header('Location: http://localhost/jfk/copil.html');
 			}
 
 			if($row["role"] == 'parent')
 			{
-				header('Location: http://localhost:8181/jfk/parinte.html');
+				header('Location: http://localhost/jfk/parinte.html');
 			}
 		}
 	}
