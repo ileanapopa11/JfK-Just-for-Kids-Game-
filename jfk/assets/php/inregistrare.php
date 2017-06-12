@@ -19,27 +19,21 @@
 		{
 			$sql= "INSERT INTO users (username, password, role) VALUES ('{$email}' ,'{$parola}','parent')"; 
 
-			$data = mysqli_query($connection, $sql);
-			if(mysqli_error($connection))
-			{
-				echo mysqli_error($connection);
-			}
-
-			$select = "select * from users";
-
-			$result = mysqli_query($connection, $select);
+			$result = mysqli_query($connection, $sql);
+		
 			if(!$result)
 			{
-				echo "Error: ".mysqli_error(connection);
+				header('Location: ../../eroare.html');
 				exit;
 			}
 
-			echo '<pre>';
-			while($row = mysqli_fetch_assoc($result))
+			if(!$row = mysqli_fetch_assoc($result) )
 			{
-				print_r($row);
+				header('Location: ../../eroare.html');
+				exit;
+			}
 
-			}		
+			header('Location: index.html');
 		}
 	}	
 

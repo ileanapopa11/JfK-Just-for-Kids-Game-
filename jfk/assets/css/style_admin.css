@@ -365,6 +365,9 @@ body input[type=submit], body button{
 	display: block;
 	text-align: center;
 }
+#at .neafisat{
+	display: none;
+}
 #at div, #st div, #su div, #mail div{
 	padding: 10px;
 }

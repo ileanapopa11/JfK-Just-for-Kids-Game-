@@ -252,6 +252,21 @@ header .middle button:hover {
    transform: scale(2);
 }
 
+.gamePicker-description h6
+{
+   color: grey;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 16px;
+}
+
+.gamePicker-description p
+{
+   color: darkgrey;
+   font-weight: bold;
+   font-family: 'Palanquin Dark', sans-serif;
+   font-size: 16px;
+}
+
 /*AUX SECTION*/
 #aux{
   float: left;
@@ -356,15 +371,41 @@ header .middle button:hover {
    }
 }
 
+/*SECTION PUNCTAJ*/
 
+#punctaj{
+  float: left;
+  width: 100%;
+}
 
+table{
+   margin: 0px 0px 40px 0px;
+   float: left;
+   width: 100%;
+   padding-left: 10%;
+   padding-right: 10%;
+   padding-bottom: 30px;
+   list-style: none;
+}
 
+th, td{
+   border: solid 5px #FED136;
+}
 
+td{
+   background-color: Bisque;
+}
 
+.childColumn{
+   font-size: 35px;
+   font-family: 'Palanquin Dark', sans-serif;
+   color: #FED136;
+   text-transform: uppercase;
+   margin: 0;
+   text-align: center;
+   width: 25%;
+}
 
-
-
-
-
-
-
+#punctaj h4{
+   font-size: 20px;
+}

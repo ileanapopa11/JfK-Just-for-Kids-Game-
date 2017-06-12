@@ -1,8 +1,8 @@
 <?php 
 	session_start();
-
 	require "mysqlConnection.php";
 	$connection = mySqlConnection::getConnection();
+
 
 	if(!empty($_POST))
 	{
@@ -10,9 +10,10 @@
 		$password = $_POST['parola'];
 		$sql = "SELECT * FROM users WHERE username = '{$email}' AND password = '{$password}'";
 		$result = mysqli_query($connection, $sql);
+		
 		if(!$result)
 		{
-			echo "Error: ".mysqli_error(connection);
+			echo "Error: ".mysqli_error($connection);
 			exit;
 		}
 
@@ -22,25 +23,23 @@
 		}
 		else
 		{		
-			$_SESSION['user'] = $row;
+			$_SESSION["id"] = $row["userid"];
 
 			if($row["role"] == 'admin')
 			{
-				header('Location: http://localhost/jfk/admin.html');
+				header('Location: http://localhost/jfk/admin.php');
 			}
 
 			if($row["role"] == 'child')
 			{
-				header('Location: http://localhost/jfk/copil.html');
+				header('Location: http://localhost/jfk/copil.php');
 			}
 
 			if($row["role"] == 'parent')
 			{
-				header('Location: http://localhost/jfk/parinte.html');
+				header('Location: http://localhost/jfk/parinte.php');
 			}
 		}
 	}
-
-	session_destroy();
 
  ?> 
