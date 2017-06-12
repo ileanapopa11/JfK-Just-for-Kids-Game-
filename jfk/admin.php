@@ -22,7 +22,7 @@
 			<nav>
 				<ul>
 					<li><a href="#" class=""><span><i class="fa fa-key" aria-hidden="true"></i>Schimbă parola</span></a></li>
-					<li id="click"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectează-mă</span></a></li>
+					<li id="deconectare"><a href="index.html"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectare</span></a></li>
 				</ul>
 			</nav>
 			<!-- <div id="deconectare">-->
@@ -171,9 +171,6 @@
 						</div>
 
 						<div> <input type="button" name="Inca o intrebare" value="inca" onClick="incauna()"> </div>
-<!-- <?php 
-	// echo "<div> <input type=\"button\" name=\"Inca o intrebare\" onclick=\"incauna()\"> </div>"; 
-?> -->
 
 				<script>
 					         function incauna()
@@ -181,7 +178,6 @@
 			            		var element=document.getElementsByClassName("neafisat")[0];
 			            		element.classList.remove('neafisat');
 			            		element.classList.add('afisat');
-			            		// document.getElementById("afis5").classList.remove('neafisat');
 			        		 }
 				</script>
 						<div>
@@ -262,5 +258,9 @@
 
 </body>
 </html>
-
-
+<script type="text/javascript">
+  document.getElementById("deconectare").onclick=function()
+  {
+    document.location = "assets/php/logout.php";
+  }
+</script>

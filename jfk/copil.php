@@ -1,6 +1,5 @@
 <?php 
   session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +17,6 @@
 
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- diacritice -->
 
-
-
 </head>
 <body>
       <div class="sticky-header">
@@ -32,12 +29,12 @@
                
                <nav>
                   <ul>
-                     <li><a href="index.html"><span>Acasă</span></a></li>
                      <li><a href="poveste.php"><span>Poveste</span></a></li>
                      <li><a href="mateFriend.php"><span>Mate</span></a></li>
                      <li><a href="muzicaFriend.php"><span>Muzică</span></a></li>
                      <li><a href="mediuFriend.php"><span>Mediu</span></a></li>
                      <li id="p"><a><span>Punctaj</span></a></li>
+                     <li id="deconectare"><a href="index.html"><span>Deconectare</span></a></li>
                   </ul>
                </nav>
          </div>
@@ -239,8 +236,15 @@
 </html>
 
 <script type="text/javascript">
-  document.getElementById("p").onclick=function(){
+  document.getElementById("p").onclick=function()
+  {
     window.location="#punctaj";
   };
- 
+</script>
+
+<script type="text/javascript">
+  document.getElementById("deconectare").onclick=function()
+  {
+    document.location = "assets/php/logout.php";
+  }
 </script>

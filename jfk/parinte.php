@@ -23,15 +23,14 @@
       
       <nav>
         <ul>
-          <li id="h"><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
           <li id="a"><a class=""><span><i class="fa fa-graduation-cap" aria-hidden="true"></i>Avantaje</span></a></li>
           <li id="c"><a><span><i class="fa fa-user-plus" aria-hidden="true"></i>Creare cont copil</span></a></li>
           <li id="e"><a ><span><i class="fa fa-child" aria-hidden="true"></i>Evoluţie</span></a></li>
           <li id="s"><a><span><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Sugestii</span></a></li>
-          <li id="click"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectare</span></a></li>
+          <li id="deconectare"><a href="index.html"><span><i class="fa fa-sign-out" aria-hidden="true"></i>Deconectare</span></a></li>
         </ul>
       </nav>
-      <!-- <div id="deconectare">-->
+
       <div class="middle">
         <h2>Bine ai venit!</h2>
         <h1>Cei 3 Muschetari<br/>...de pe WWW</h1>
@@ -240,4 +239,11 @@
   document.getElementById("s").onclick=function(){
     window.location="#sugestii";
   };
+</script>
+
+<script type="text/javascript">
+  document.getElementById("deconectare").onclick=function()
+  {
+    document.location = "assets/php/logout.php";
+  }
 </script>

@@ -30,11 +30,12 @@
                
                <nav>
                   <ul>
-                      <li><a href="index.html"><span>Acasă</span></a></li>
+                     <li><a href="copil.php"><span>Acasă</span></a></li>
                      <li><a href="poveste.php"><span>Poveste</span></a></li>
                      <li><a href="mateFriend.php"><span>Mate</span></a></li>
                      <li><a href="muzicaFriend.php"><span>Muzică</span></a></li>
                      <li><a href="mediuFriend.php"><span>Mediu</span></a></li>
+                     <li><a id="deconectare" href="index.html"><span>Deconectare</span></a></li>
                   </ul>
                </nav>
          </div>
@@ -157,3 +158,10 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+  document.getElementById("deconectare").onclick=function()
+  {
+    document.location = "assets/php/logout.php";
+  }
+</script>
