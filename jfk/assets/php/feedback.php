@@ -12,11 +12,16 @@
 		$result = mysqli_query($connection, $selectusername);
 		if(!$result)
 		{
-			echo "Error: ".mysqli_error($connection);
+			header('Location: ../../eroare.php');
 			exit;
 		}
 
-		$username = mysqli_fetch_assoc($result);
+		if(!$username = mysqli_fetch_assoc($result))
+        {
+            header('Location: ../../eroare.php');
+            exit;
+        }
+        
 		$subject = "JFK: Message from admin";
 		$from= "jfk_3m_email@gmail.com";
 

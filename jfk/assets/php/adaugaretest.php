@@ -21,9 +21,14 @@
 			$insertintotestinfo = "INSERT INTO testinfo (domain, diff, link) VALUES ('{$dom}' ,'{$dif}','{$link}')"; 
 
 			$data = mysqli_query($connection, $insertintotestinfo);
+			if(!$data)
+			{
+				header('Location: ../../eroareAdmin.php');
+				exit;
+			}
 			if(mysqli_error($connection))
 			{
-				echo mysqli_error($connection);
+				header('Location: ../../eroareAdmin.php');
 			}
 
 			
@@ -31,18 +36,19 @@
 			$result = mysqli_query($connection, $selecttid);
 			if(!$result)
 			{
-				echo "Error: ".mysqli_error($connection);
+				header('Location: ../../eroareAdmin.php');
 				exit;
 			}
 
-			$tid = mysqli_fetch_assoc($result);
-			
+			if(!$tid = mysqli_fetch_assoc($result))
+            {
+                header('Location: ../../eroareAdmin.php');
+                exit;
+            }
 			
 			$count=0;
 
-
 			$testid=intval($tid['testid']);	
-			echo $testid;
 			
 			while($array[$count] != null)
 			{
@@ -54,18 +60,15 @@
 				$result = mysqli_query($connection, $insertintotestcontent);
 				if(!$result)
 				{
-					echo "Error: ".mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 					exit;
 				}
 				$count=$count+2;
-			}
-					
+			}		
 	}	
-
-
  ?>
-
- 			<script>
-     			 window.location.href = '../../admin.php';
-     			 alert("Testul a fost introdus cu succes");
-    		</script>
+ 
+<script>
+    window.location.href = '../../admin.php';
+    alert("Testul a fost introdus cu succes");
+</script>

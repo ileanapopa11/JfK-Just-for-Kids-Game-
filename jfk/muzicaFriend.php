@@ -1,6 +1,8 @@
 <?php 
    session_start();
    $_SESSION["domeniul"]="muzica";
+
+   $connection = $_SESSION["conexiune"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
   
     <div class="sticky-header">
          <div class="center">
-               <a href="index.html" title="Cei trei Muschetari" class="logo">
+               <a href="copil.php" title="Cei trei Muschetari" class="logo">
                       <div class="logo3m">
                       <img  src="assets/img/logo.png" alt="CEI TREI MUSCHETARI LOGO">
                       </div>

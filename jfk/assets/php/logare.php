@@ -13,7 +13,7 @@
 		
 		if(!$result)
 		{
-			echo "Error: ".mysqli_error($connection);
+			header('Location: ../../eroare.php');
 			exit;
 		}
 
@@ -40,6 +40,12 @@
 				header('Location: http://localhost/jfk/parinte.php');
 			}
 		}
+
 	}
 
  ?> 
+
+<script>
+    window.location.href = '../../index.html';
+    alert("Utilizator sau parola gresite!");
+</script>

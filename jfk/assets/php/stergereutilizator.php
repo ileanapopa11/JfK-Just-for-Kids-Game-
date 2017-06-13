@@ -26,12 +26,12 @@
 			$data = mysqli_query($connection, $deleteFromUsers);
 			if(mysqli_error($connection))
 			{
-				echo mysqli_error($connection);
+				header('Location: ../../eroareAdmin.php');
 			}
 			if(!$data)
 			{
-					echo "Error: ".mysqli_error($connection);
-					exit;
+				header('Location: ../../eroareAdmin.php');
+				exit;
 			}
 
 			if($row["role"] == 'parent')
@@ -40,12 +40,12 @@
 				$resultSelectCopii = mysqli_query($connection, $selectCopii);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 				}
 				if(!$resultSelectCopii)
 				{
-						echo "Error: ".mysqli_error($connection);
-						exit;
+					header('Location: ../../eroareAdmin.php');
+					exit;
 				}
 				else
 				{
@@ -56,8 +56,8 @@
 						$dataDeleteFromChildinfo = mysqli_query($connection, $deleteFromChildinfo);
 						if(!$dataDeleteFromChildinfo)
 						{
-								echo "Error: ".mysqli_error($connection);
-								exit;
+							header('Location: ../../eroareAdmin.php');
+							exit;
 						}
 					}
 				}
@@ -67,12 +67,12 @@
 				$dataDeleteFromRelation = mysqli_query($connection, $deleteFromRelation);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 				}
 				if(!$dataDeleteFromRelation)
 				{
-						echo "Error: ".mysqli_error($connection);
-						exit;
+					header('Location: ../../eroareAdmin.php');
+					exit;
 				}
 			}
 			
@@ -83,12 +83,12 @@
 				$dataDeleteFromSolved = mysqli_query($connection, $deleteFromSolved);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 				}
 				if(!$dataDeleteFromSolved)
 				{
-						echo "Error: ".mysqli_error($connection);
-						exit;
+					header('Location: ../../eroareAdmin.php');
+					exit;
 				}
 
 				$deleteFromRelation = "DELETE FROM relation WHERE childid = '{$tid}'"; 
@@ -96,12 +96,12 @@
 				$dataDeleteFromRelation = mysqli_query($connection, $deleteFromRelation);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 				}
 				if(!$dataDeleteFromRelation)
 				{
-						echo "Error: ".mysqli_error($connection);
-						exit;
+					header('Location: ../../eroareAdmin.php');
+					exit;
 				}
 
 				$deleteFromChildinfo = "DELETE FROM childinfo WHERE childid = '{$tid}'"; 
@@ -109,20 +109,19 @@
 				$dataDeleteFromChildinfo = mysqli_query($connection, $deleteFromChildinfo);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 				}
 				if(!$dataDeleteFromChildinfo)
 				{
-						echo "Error: ".mysqli_error($connection);
-						exit;
+					header('Location: ../../eroareAdmin.php');
+					exit;
 				}
 			}
 
 		}	
 	}	
  ?>
-
- 			<script>
-     			 window.location.href = '../../admin.php';
-     			 alert("Testul a fost sters cu succes");
-    		</script>
+<script>
+    window.location.href = '../../admin.php';
+     alert("Utilizatorul a fost sters cu succes");
+</script>

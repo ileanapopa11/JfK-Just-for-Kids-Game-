@@ -11,30 +11,23 @@
 		$parola = $_POST['parola'];
 		$parolaconf = $_POST['parolaconf'];
 
-		if($an > 1995)
-		{
-			echo "Nu aveti varsta";
-		}
-		else
-		{
-			$sql= "INSERT INTO users (username, password, role) VALUES ('{$email}' ,'{$parola}','parent')"; 
+		$sql= "INSERT INTO users (username, password, role) VALUES ('{$email}' ,'{$parola}','parent')"; 
 
-			$result = mysqli_query($connection, $sql);
+		$result = mysqli_query($connection, $sql);
 		
-			if(!$result)
-			{
-				header('Location: ../../eroare.html');
-				exit;
-			}
-
-			if(!$row = mysqli_fetch_assoc($result) )
-			{
-				header('Location: ../../eroare.html');
-				exit;
-			}
-
-			header('Location: index.html');
+		if(!$result)
+		{
+			header('Location: ../../eroare.php');
+			exit;
 		}
+
+		if(!$row = mysqli_fetch_assoc($result) )
+		{
+			header('Location: ../../eroare.php');
+			exit;
+		}
+
+		header('Location: index.html');
 	}	
 
 

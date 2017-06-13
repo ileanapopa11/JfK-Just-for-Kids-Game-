@@ -7,10 +7,7 @@
 <head>
    <title>Lupta cu Muschetarii</title>
    <link rel="stylesheet" type="text/css" href="assets/css/styleGame.css">
-   <!-- <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"> -->
-
    <link rel="icon" type="image/x-icon"  href="assets/img/logo.png">
-
    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -21,7 +18,7 @@
    <body>
       <div class="sticky-header">
          <div class="center">
-            <a href="index.html" title="Cei trei Muschetari" class="logo">
+            <a href="copil.php" title="Cei trei Muschetari" class="logo">
                <div class="logo3m">
                   <img  src="assets/img/logo.png" alt="CEI TREI MUSCHETARI LOGO">
                </div>
@@ -43,8 +40,20 @@
       <section id="muschetar">
          <?php 
             echo "<h3>Joc ".$_SESSION["dificultate"]."</h3>";
+
+            if($_SESSION["domeniul"] == "matematica")
+            {
+               echo "<h4>Concentrare și curaj</h4>";
+            }
+            if($_SESSION["domeniul"] == "muzica")
+            {
+               echo "<h4>Energie și veselie</h4>";
+            }
+            if($_SESSION["domeniul"] == "mediu")
+            {
+               echo "<h4>Responsablitate și explorare</h4>";
+            }
           ?>
-            <h4>Concentrare și curaj!</h4>
       </section>
 
 
@@ -56,60 +65,100 @@
                      require "assets/php/mysqlConnection.php";
                      $connection = mySqlConnection::getConnection();
 
-                     if((isset($_SESSION["domeniul"]) && isset($_SESSION["dificultate"])) == 1) 
+                     if((isset($_SESSION["domeniul"]) && isset($_SESSION["dificultate"])) == 1)  // Daca avem materia si dificultatea
                      {
                         $domeniul = $_SESSION["domeniul"];
                         $dificultatea = $_SESSION["dificultate"];
                         $iduser = $_SESSION["id"];
 
+                        // Selectare ID Test deja rezolvat 
+
                         $sqlTestId = "SELECT * FROM solved WHERE childid = '{$iduser}' and domain = '{$domeniul}' and diff= '{$dificultatea}' ";
                         $resultTestId = mysqli_query($connection, $sqlTestId);
-                        $testId = mysqli_fetch_assoc($resultTestId);
+                        if(!$resultTestId)
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
+                        if(!$testId = mysqli_fetch_assoc($resultTestId))
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
                         $testIdRezolvat = $testId['testid'];
 
+                        // Selectare ID Test Urmator ce trebuie afisat
 
                         $sqlTestIdUrmator = "SELECT * FROM testinfo WHERE testid > '{$testIdRezolvat}' and domain= '{$domeniul}' and diff= '{$dificultatea}' order by testid LIMIT 1"; 
                         $resultTestIdUrmator = mysqli_query($connection, $sqlTestIdUrmator);
-                        $testId = mysqli_fetch_assoc($resultTestIdUrmator);
+                        if(!$resultTestIdUrmator)
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
+                         if(!$testId = mysqli_fetch_assoc($resultTestIdUrmator))
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
                         $testIdUrmator = $testId['testid'];
                      
+                        // Selectare continut Test ce trebuie afisat
+
                         $sqlIntrebari = "SELECT * FROM testcontent WHERE testid= '{$testIdUrmator}'";
                         $resultIntrebari = mysqli_query($connection, $sqlIntrebari);
+                        if(!$resultIntrebari)
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
 
                         $resultNrIntrebari = mysqli_query($connection, "SELECT count(*) FROM testcontent WHERE testid= '{$testIdUrmator}'");
-                        $nrIntrebari = mysqli_fetch_assoc($resultNrIntrebari);
+                        if(!$resultNrIntrebari)
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
+                        if(!$nrIntrebari = mysqli_fetch_assoc($resultNrIntrebari))
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
 
-
-
+                        //Descrierea dificultatii
                         $sqlDescriere = "SELECT * FROM difficulty WHERE diff = '{$dificultatea}'";
                         $resultDescriere = mysqli_query($connection, $sqlDescriere);
-                        
                         
 
                         if(mysqli_error($connection))
                         {
-                           echo mysqli_error($connection);
+                           header('Location: eroare.php');
+                           exit;
                         }
                         if(!$resultIntrebari)
                         {
-                           echo "Error: ".mysqli_error(connection);
+                           header('Location: eroare.php');
                            exit;
                         }
                         if(!$resultDescriere)
                         {
-                           echo "Error: ".mysqli_error(connection);
+                           header('Location: eroare.php');
                            exit;
                         }
 
-                        $rowDescriere = mysqli_fetch_assoc($resultDescriere);
-
+                        
+                        if(!$rowDescriere = mysqli_fetch_assoc($resultDescriere))
+                        {
+                           header('Location: eroare.php');
+                           exit;
+                        }
                         $count=1;
 
-
+                        //Afisarea Intrebarilor Testului
                         while($rowIntrebari = mysqli_fetch_assoc($resultIntrebari))
                         {   
                           
-                           if($count==1)
+                           if($count==1) //Prima Intrebare
                            {
                               echo "<li id=l".$count." class =\"jocuri-item\">
                                  <figure class=\"jocuri-image\">
@@ -134,6 +183,7 @@
                                  </figure>";
                            }
 
+                           //Afisare urmatoarele intrebari
                            if($dificultatea == "greu")
                            {
                               echo "<form class=\"jocuri-description\">";
@@ -186,6 +236,7 @@
                      }
                      else echo"Nu esti logat";
 
+                     //Lipsa teste pentru utilizator
                      if($testIdUrmator == null)
                      {
                         echo "<li id=\"felicitari\" class =\"jocuri-item\">
@@ -204,6 +255,7 @@
                               echo "</div>";
                      }
 
+                     //Rezultat test
                      echo "<li id=\"felicitari\" class =\"jocuri-item-none\">
                                  <figure class=\"jocuri-image\">
                                     <img src=\"assets/img/mate3.png\" alt=\"Pattern\">
@@ -225,10 +277,15 @@
             </ul>
          </div>
       </section>
+   </body>
+</html>
+
+     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
       <script>
          var nrRaspunsuri=0;
 
+         //Verificare raspunsuri test usor
          var apasareUsor = function(clicked_id, raspunsCorect, nr, puncte, idTestUrm)
          {  
             if(Number(clicked_id) < Number(nr))
@@ -295,9 +352,9 @@
                   }
                });
             }
-
          }
 
+         //Verificare raspunsuri test mediu
          var apasareMediu = function(clicked_id, raspunsCorect, nr, puncte, idTestUrm)
          {  
             if(Number(clicked_id) < Number(nr))
@@ -355,6 +412,7 @@
             }
          }
 
+          //Verificare raspunsuri test greu
          var apasareGreu = function(clicked_id, raspunsCorect, nr, puncte, idTestUrm)
          {  
             if(Number(clicked_id) < Number(nr))
@@ -368,7 +426,6 @@
                document.getElementById("l".concat(clicked_id)).classList.add('jocuri-item-none');
                document.getElementById("l".concat(Number(clicked_id)+1)).classList.remove('jocuri-item-none');
                document.getElementById("l".concat(Number(clicked_id)+1)).classList.add('jocuri-item');
-               // alert(nrRaspunsuri);
             }
             else
             {
@@ -401,10 +458,8 @@
          }
       </script>
 
-   </body>
-</html>
-
 <script type="text/javascript">
+//Deconectare
   document.getElementById("deconectare").onclick=function()
   {
     document.location = "assets/php/logout.php";

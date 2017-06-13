@@ -16,13 +16,13 @@
 	
 		if(!$result)
 		{
-			header('Location:../../eroare.html');
+			header('Location: ../../eroare.php');
 			exit;
 		}
 
 		if(!$row = mysqli_fetch_assoc($result) )
 		{
-			$login_error = "Wrong username for password";
+			header('Location: ../../eroare.php');
 		}
 			
 		else 
@@ -32,11 +32,11 @@
 			$resultUpdatePunctaj = mysqli_query($connection, $sqlUpdatePunctaj);
 			if(mysqli_error($connection))
 			{
-				echo mysqli_error($connection);
+				header('Location: ../../eroare.php');
 			}
 			if(!$resultUpdatePunctaj)
 			{
-				header('Location: ../../eroare.html');
+				header('Location: ../../eroare.php');
 				exit;
 			}
 
@@ -45,11 +45,11 @@
 
 			if(mysqli_error($connection))
 			{
-				echo mysqli_error($connection);
+				header('Location: ../../eroare.php');
 			}
 			if(!$resultUpdateTest)
 			{
-				header('Location: ../../eroare.html');
+				header('Location: ../../eroare.php');
 				exit;
 			}
 		}
@@ -64,7 +64,7 @@
 			}
 			if(!$resultSelectParinte)
 			{
-				header('Location: ../../eroare.html');
+				header('Location: ../../eroare.php');
 				exit;
 			}
 			if(!$rowSelectParinte = mysqli_fetch_assoc($resultSelectParinte))
@@ -83,12 +83,12 @@
 				}
 				if(!$resultSelectParinteEmail)
 				{
-					header('Location: ../../eroare.html');
+					header('Location: ../../eroare.php');
 					exit;
 				}
 				if(!$rowSelectParinteEmail = mysqli_fetch_assoc($resultSelectParinteEmail))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroare.php');
 				}
 				else
 				{
@@ -99,7 +99,7 @@
 				$resultSelectNumeCopil = mysqli_query($connection, $selectNumeCopil);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroare.php');
 				}
 				if(!$resultSelectNumeCopil)
 				{
@@ -108,7 +108,7 @@
 				}
 				if(!$rowSelectNumeCopil = mysqli_fetch_assoc($resultSelectNumeCopil))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroare.php');
 				}
 				else 
 				{

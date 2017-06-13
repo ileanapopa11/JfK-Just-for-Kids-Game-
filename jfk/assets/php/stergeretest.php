@@ -13,12 +13,11 @@
 			$data = mysqli_query($connection, $deletefromtestinfo);
 			if(mysqli_error($connection))
 			{
-				echo mysqli_error($connection);
+				header('Location: ../../eroareAdmin.php');
 			}
 			if(!$data)
 			{
-				echo "Error: ".mysqli_error($connection);
-				header();
+				header('Location: ../../eroareAdmin.php');
 				exit;
 			}
 
@@ -27,11 +26,11 @@
 				$result = mysqli_query($connection, $deletefromtestcontent);
 				if(mysqli_error($connection))
 				{
-					echo mysqli_error($connection);
+					header('Location: ../../eroareAdmin.php');
 				}
 				if(!$result)
 				{
-					header('Location: ../../eroare.html');
+					header('Location: ../../eroareAdmin.php');
 					exit;
 				}
 			}
@@ -39,7 +38,7 @@
 	}	
  ?>
 
- 			<script>
-     			 window.location.href = '../../admin.php';
-     			 alert("Testul a fost sters cu succes");
-    		</script>
+<script>
+    window.location.href = '../../admin.php';
+    alert("Testul a fost sters cu succes");
+</script>

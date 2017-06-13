@@ -258,7 +258,7 @@ body #cont
     cursor: pointer ;
 }
 
-#cont #connectButton, #cont .social
+#cont #connectButton, .social
 {
     font-family: 'Palaquin Dark',sans-serif;
     display: inline-block;
@@ -276,12 +276,12 @@ body #cont
     height: 45px;
 }
 
-#cont .social i
+.social i
 {
 	color: black;
 }
 
-#cont .social
+.social
 {
     background: #fff;
     color: #2e3d49;
@@ -293,6 +293,20 @@ body #cont
     display: inline;
     margin-left: 15px;
 }
+
+.social:first-child
+{
+    background: #fff;
+    color: #2e3d49;
+    border: 1px solid #dbe2e8;
+    margin: 0;
+    width: 165px;
+    font-size: 15px;
+    font-weight: 400;
+    display: inline;
+    margin-left: 37.5%;
+}
+
 
 /*SECTION ABOUT*/
 

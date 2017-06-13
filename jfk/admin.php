@@ -118,32 +118,38 @@
 					<h5>Adăugare test</h5>
 					<form id="at" method="POST" action="assets/php/adaugaretest.php">
 						<div>
-							<p>(matematica/muzica/mediul)</p>
 							<i class="fa fa-list" aria-hidden="true"></i>
-							<input type="text" name="domeniu" placeholder="Domeniu">
+							<select name = "domeniu">
+								<option  value="matematica">Matematica</option>
+  								<option  value="muzica">Muzica</option>
+  								<option  value="mediu">Mediul</option>
+							</select>
 						</div>
 						<div>
-							<p>(usor/mediu/greu)</p>
 							<i class="fa fa-level-up" aria-hidden="true"></i>
-							<input type="text" name="dificultate" placeholder="Dificultate">
+							<select name = "dificultate">
+								<option  value="usor">Usor</option>
+  								<option  value="mediu">Mediu</option>
+  								<option  value="greu">Greu</option>
+							</select>
 						</div>
 						<div class="afisat">
 							<i class="fa fa-question-circle" aria-hidden="true"></i>
-							<input type="text" name="intrebare1" placeholder="Intrebare1">	
+							<input type="text" name="intrebare1" placeholder="Intrebare1" required>	
 							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<input type="text" name="raspuns1" placeholder="Raspuns1">
+							<input type="text" name="raspuns1" placeholder="Raspuns1" required>
 						</div>
 						<div class="afisat">
 							<i class="fa fa-question-circle" aria-hidden="true"></i>
-							<input type="text" name="intrebare2" placeholder="Intrebare2">
+							<input type="text" name="intrebare2" placeholder="Intrebare2" required>
 							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<input type="text" name="raspuns2" placeholder="Raspuns2">
+							<input type="text" name="raspuns2" placeholder="Raspuns2" required>
 						</div>
 						<div class="afisat">
 							<i class="fa fa-question-circle" aria-hidden="true"></i>
-							<input type="text" name="intrebare3" placeholder="Intrebare3">
+							<input type="text" name="intrebare3" placeholder="Intrebare3" required>
 							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<input type="text" name="raspuns3" placeholder="Raspuns3">
+							<input type="text" name="raspuns3" placeholder="Raspuns3" required>
 						</div>
 						<div class="neafisat" id="afis">
 							<i class="fa fa-question-circle" aria-hidden="true"></i>

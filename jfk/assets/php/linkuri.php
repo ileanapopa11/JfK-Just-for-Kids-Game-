@@ -7,7 +7,7 @@
 		$result = mysqli_query($connection, $selectlinkuri);
 		if(!$result)
 		{
-			echo "Error: ".mysqli_error($connection);
+			header('Location: ../../eroare.php');
 			exit;
 		}
 

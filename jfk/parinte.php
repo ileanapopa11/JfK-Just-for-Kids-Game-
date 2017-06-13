@@ -1,5 +1,6 @@
 <?php 
   session_start();
+  
 ?>
 
 <!DOCTYPE html>
@@ -15,11 +16,29 @@
 </head>
 
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '732798033548139',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
   <div id="jfk">
     <header>
       <div class="center">
-        <a href="/" title="Parent's Page for JFK" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
+        <a href="" title="Parent's Page for JFK" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
       
       <nav>
         <ul>
@@ -126,23 +145,25 @@
       <table class="evol-list">
       
       <?php 
-          $id_parinte = 3; //$_SESSION["id"];
+
           require "assets/php/mysqlConnection.php";
-          
           $connection = mySqlConnection::getConnection();
+
+          $id_parinte = $_SESSION["id"];
+
           $sqlCopii= "SELECT * FROM relation WHERE parentid=" . $id_parinte; 
 
           $listaCopiiID = mysqli_query($connection, $sqlCopii);
             
           if(mysqli_error($connection))
           {
-                echo mysqli_error($connection);
+            header('Location: eroare.php');
           }
             
           if(!$listaCopiiID)
           {
-                echo "Error: ".mysqli_error($connection);
-                exit;
+            header('Location: eroare.php');
+            exit;
           }
 
           echo "<tr>";
@@ -169,17 +190,28 @@
                 $sqlNumeCopil = "SELECT * from users where role='child' and userid=" . $row['childid'] . ";";
                 $listaNumeCopil = mysqli_query($connection, $sqlNumeCopil);
 
+                if(!$listaNumeCopil)
+                {
+                  header('Location: eroare.php');
+                  exit;
+                }
+
                 while($row2 = mysqli_fetch_assoc($listaNumeCopil))
                 {
                     echo "<tr class=\"evol-item\">";
                         echo "<td class=\"evol-description\">";
                                 echo "<h5>".$row2['nickname']."</h5>";
                         echo "</td>";
-                    // echo "</tr>";
                 }
                 
                 $sqlDateCopil = "SELECT * FROM childinfo where childid=" . $row['childid'];
                 $listaCopilINFO = mysqli_query($connection, $sqlDateCopil);
+
+                if(!$listaCopilINFO)
+                {
+                  header('Location: eroare.php');
+                  exit;
+                }
 
                 while($row3 = mysqli_fetch_assoc($listaCopilINFO))
                 {      
@@ -208,17 +240,25 @@
           }
     ?>
     </table>
-    
+    <button style="margin-left: 43%" id="shareBtn" class="btn btn-success clearfix">Share On Facebook</button>
     </section>
-
+    <script>
+          document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+              method: 'share',
+              display: 'popup',
+              href: 'https://facebook.com',
+            }, function(response){});
+          }
+    </script>
     <!-- SUGESTII -->
     <section id="sugestii">
       <h3>Sugestii</h3>
       <h4>Implicaţi-vă activ, sugerând site-uri sau articole pentru realizarea testelor</h4>
-      <form>
+      <form method="post" action="assets/php/sugestiiLink.php">
         <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
           <input type="text" name="link" placeholder="Link-ul complet"> <br>
-        <button>Trimite</button>
+        <button type="submit">Trimite</button>
       </form>
       <h4>Mulţumim!</h4>
     </section>

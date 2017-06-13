@@ -1,6 +1,8 @@
 <?php 
    session_start();
    $_SESSION["domeniul"]="matematica";
+
+   $connection = $_SESSION["conexiune"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,14 +17,13 @@
    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- diacritice -->
-
       
 </head>
 <body>
   
     <div class="sticky-header">
          <div class="center">
-               <a href="index.html" title="Cei trei Muschetari" class="logo">
+               <a href="copil.php" title="Cei trei Muschetari" class="logo">
                       <div class="logo3m">
                       <img src="assets/img/logo.png" alt="CEI TREI MUSCHETARI LOGO">
                       </div>
@@ -48,7 +49,6 @@
          <p> <i class="firstLetter">A </i> fost odată ca niciodată un muschetar mic de statură care umbla mereu prafuit și avea haine rupte, fapt pentru care nu era iubit de nimeni. Însă ce lumea de rând nu știa despre el era că-i atat de puternic încât poate muta munții din loc. El este muschetarul matematicii. Ești gata să rezolvi exercițiile împreună cu el?</p>
       
    </section>
-
 
 
    <section id="jocuri">
