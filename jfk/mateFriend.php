@@ -1,8 +1,11 @@
 <?php 
    session_start();
+   if(!isset($_SESSION["id"]))
+   {
+      header('Location: index.html');
+   }
    $_SESSION["domeniul"]="matematica";
 
-   $connection = $_SESSION["conexiune"];
 ?>
 <!DOCTYPE html>
 <html>

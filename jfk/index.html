@@ -11,7 +11,7 @@
 		<script type= "text/javascript" src="assets/js/javascrips.js" ></script>
 	</head>
 	<body>
-
+		<!-- Initializare faceboo js SDK -->
 		<script>
 			  window.fbAsyncInit = function() 
 			  {
@@ -86,7 +86,7 @@
 						
 					<div class="middle">
 						<h1>Cei 3 Muschetari<br/>...de pe WWW</h1>
-						<button id= "someid">NU AI CONT?</button>	
+						<a href="#cont"><button id= "someid">NU AI CONT?</button></a>
 					</div>
 				</div>
 			</header>
@@ -133,21 +133,21 @@
 				<form id="cont" method="post" action="http://localhost/jfk/assets/php/inregistrare.php">
 					<div id="email-signup">
 						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						<input type="text" name="email" placeholder="E-mail" required="required">
+						<input type="text" name="email" placeholder="E-mail" required="required" pattern=".*@.*[A-Za-z]\..*[A-Za-z].*" title="Adaugă un e-mail valid">
 					</div>
 					<div id="data_nastere-signup">
 						<i class="fa fa-birthday-cake" aria-hidden="true"></i>
-						<input type="text" name="zi" placeholder="Ziua" required="required">
-						<input type="text" name="luna" placeholder="Luna" required="required">
-						<input type="text" name="an" placeholder="Anul" required="required">
+						<input type="text" name="zi" placeholder="Ziua" pattern="(0[1-9])|([1-2][0-9])|(3[0-1])" required="required">
+						<input type="text" name="luna" placeholder="Luna" pattern="(0[1-9])|(1[0-2])" required="required">
+						<input type="text" name="an" placeholder="Anul" required="required" pattern="19[0-9][0-9]" title="Părinții trebuie să fie născuți între anii 1900-2000">
 					</div>
 					<div id="parola-signup">
 						<i class="fa fa-key" aria-hidden="true"></i>
-						<input type="password" name="parola" placeholder="Parola" required="required" pattern="[a-zA-z0-9]{7,}" onchange="form.parolaconf.pattern = this.value;">
+						<input type="password" name="parola" placeholder="Parola" required="required" pattern="[a-zA-z0-9]{7,}" onchange="form.parolaconf.pattern = this.value;" title="Parola trebuie sa aiba cel putin 7 caractere.">
 					</div>
 					<div id="parola_conf-signup">
 						<i class="fa fa-shield" aria-hidden="true"></i>
-						<input type="password" name="parolaconf" placeholder="Confirmare Parola" required="required" pattern="[a-zA-z0-9]{7,}">
+						<input type="password" name="parolaconf" placeholder="Confirmare Parola" required="required" pattern="[a-zA-z0-9]{7,}" title="Confirmați parola de mai sus!">
 					</div>
 					<div><input id="connectButton" type="submit" name="Conectare" value="Conectare"></div>
 				</form>

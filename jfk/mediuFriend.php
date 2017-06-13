@@ -1,7 +1,10 @@
 <?php 
    session_start();
+   if(!isset($_SESSION["id"]))
+   {
+      header('Location: index.html');
+   }
    $_SESSION["domeniul"]="mediu";
-   $connection = $_SESSION["conexiune"];
    
 ?>
 <!DOCTYPE html>

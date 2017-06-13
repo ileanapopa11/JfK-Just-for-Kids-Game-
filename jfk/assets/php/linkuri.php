@@ -1,4 +1,9 @@
 <?php 
+	if(!isset($_SESSION["id"]))
+	{
+		header('Location: index.html');
+	}
+	session_start();
 	require "mysqlConnection.php";
 	$connection = mySqlConnection::getConnection();
 

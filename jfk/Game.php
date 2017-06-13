@@ -1,5 +1,9 @@
 <?php 
    session_start();
+   if(!isset($_SESSION["id"]))
+   {
+      header('Location: index.html');
+   }
    $_SESSION["dificultate"]=$_GET["dificultate"];
 ?>
 <!DOCTYPE html>

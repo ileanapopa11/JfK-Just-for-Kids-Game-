@@ -1,6 +1,9 @@
 <?php 
   session_start();
-  
+  if(!isset($_SESSION["id"]))
+  {
+    header('Location: index.html');
+  }
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +45,7 @@
       
       <nav>
         <ul>
-          <li id="a"><a class=""><span><i class="fa fa-graduation-cap" aria-hidden="true"></i>Avantaje</span></a></li>
+          <li id="a"><a ><span><i class="fa fa-graduation-cap" aria-hidden="true"></i>Avantaje</span></a></li>
           <li id="c"><a><span><i class="fa fa-user-plus" aria-hidden="true"></i>Creare cont copil</span></a></li>
           <li id="e"><a ><span><i class="fa fa-child" aria-hidden="true"></i>Evoluţie</span></a></li>
           <li id="s"><a><span><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Sugestii</span></a></li>

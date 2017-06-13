@@ -1,5 +1,9 @@
 <?php 
 	session_start();
+	if(!isset($_SESSION["id"]))
+	{
+		header('Location: index.html');
+	}
  ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +33,8 @@
 			<div class="middle">
 				<h2>Bun venit!</h2>
 				<h1>Cei 3 Muschetari<br/>...de pe WWW</h1>
-				<button>CE MAI E NOU?</button>	
+				<a href="#print"><button>CE MAI E NOU?</button></a>
+				
 			</div> 
 			</div>
 		</header>
@@ -41,18 +46,18 @@
 					<nav>
 					<ul>
 						<li><a href="#" class=""><span><i class="fa fa-home" aria-hidden="true"></i>Acasă</span></a></li>
-						<li><a href="#" class=""><span><i class="fa fa-bar-chart" aria-hidden="true"></i>Statistici</span></a></li>
+						<li><a href="assets/php/statistici.php" class=""><span><i class="fa fa-bar-chart" aria-hidden="true"></i>Statistici</span></a></li>
 						<li><span>Vizualizare</span></li>
-						<li><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i>Nefiltrată</span></a></li>
-						<li><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i>Filtrată</span></a></li>
+						<li><a href="#print"><span><i class="fa fa-search" aria-hidden="true"></i>Nefiltrată</span></a></li>
+						<li><a href="#print"><span><i class="fa fa-search" aria-hidden="true"></i>Filtrată</span></a></li>
 						<li><span>Modificare</span></li>
-						<li><a href="#"><span><i class="fa fa-plus-circle" aria-hidden="true"></i>Adăugare test</span></a></li>
-						<li><a href="#"><span><i class="fa fa-minus-circle" aria-hidden="true"></i>Ștergere test</span></a></li>
-						<li><a href="#"><span><i class="fa fa-check-circle" aria-hidden="true"></i>Modificare test</span></a></li>
-						<li><a href="#"><span><i class="fa fa-ban" aria-hidden="true"></i>Ștergere utilizator</span></a></li>
+						<li><a href="#at"><span><i class="fa fa-plus-circle" aria-hidden="true"></i>Adăugare test</span></a></li>
+						<li><a href="#st"><span><i class="fa fa-minus-circle" aria-hidden="true"></i>Ștergere test</span></a></li>
+						<li><a href="#mod"><span><i class="fa fa-check-circle" aria-hidden="true"></i>Modificare test</span></a></li>
+						<li><a href="#st"><span><i class="fa fa-ban" aria-hidden="true"></i>Ștergere utilizator</span></a></li>
 						<li><span>Feedback</span></li>
-						<li><a href="#"><span><i class="fa fa-share" aria-hidden="true"></i>De la utilizatori</span></a></li>
-						<li><a href="#"><span><i class="fa fa-reply" aria-hidden="true"></i>Pentru utilizatori</span></a></li>
+						<li><a href="#fb"><span><i class="fa fa-share" aria-hidden="true"></i>De la utilizatori</span></a></li>
+						<li><a href="#fb"><span><i class="fa fa-reply" aria-hidden="true"></i>Pentru utilizatori</span></a></li>
 					</ul>
 					</nav>
 				</div>
@@ -62,7 +67,7 @@
 					<h4><i class="fa fa-info-circle" aria-hidden="true"></i>Informaţiile din baza de date în acest moment<i class="fa fa-info-circle" aria-hidden="true"></i></h4>
 					<ul class="viz-list">
 						<li class="viz-item">
-							<a id="print" href="#">
+							<a id="print" href="assets/php/vizcopii.php">
 								<figure id="invatacei" class="viz-image">
 									<img src="assets/img/viz-1.jpg" alt="copii">
 									<div class="viz-image-text">
@@ -76,7 +81,7 @@
 						</li>
 						
 						<li class="viz-item">
-							<a href="#">
+							<a href="assets/php/vizparinti.php">
 								<figure class="viz-image">
 									<img src="assets/img/viz-2.jpg" alt="parinti">
 									<div class="viz-image-text">
@@ -89,7 +94,7 @@
 							</a>
 						</li>
 						<li class="viz-item">
-							<a href="#">
+							<a href="assets/php/vizteste.php">
 								<figure class="viz-image">
 									<img src="assets/img/viz-3.jpg" alt="teste">
 									<div class="viz-image-text">
@@ -102,7 +107,7 @@
 							</a>
 						</li>
 						</ul>
-						<form>
+						<form action="assets/php/oriceselect.php" method="post">
 							<h4>Dacă dorești orice altă informaţie, introdu fraza select corespunzătoare în câmpul de mai jos:</h4><br>
 							<input type="text" name="select">
 							<input type="submit" value="Trimite">
@@ -238,7 +243,7 @@
 					<h5>Feedback de la utilizatori</h5>
 					<div id="fbu">
 					<p>Sugestii primite de la părinţi: link-uri pentru conceperea testelor</p>
-					<a href = "assets/php/linkuri.php"> Vezi sugestiile</a>
+					<a href = "assets/php/linkuri.php"> <button>Vezi sugestiile</button></a>
 					</div>
 				</div>
 				<div class="feedback">

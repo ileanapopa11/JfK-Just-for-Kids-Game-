@@ -1,4 +1,5 @@
 <?php 
+	
 	require "mysqlConnection.php";
 	$connection = mySqlConnection::getConnection();
 
@@ -11,24 +12,42 @@
 		$parola = $_POST['parola'];
 		$parolaconf = $_POST['parolaconf'];
 
-		$sql= "INSERT INTO users (username, password, role) VALUES ('{$email}' ,'{$parola}','parent')"; 
+		$verificare = mysqli_query($connection, "SELECT count(*) FROM users WHERE username = '{$email}' ");
+		$row = mysqli_fetch_assoc($verificare) ;
+		if($row['count(*)'] != 0)
+		{	
+			?>
 
-		$result = mysqli_query($connection, $sql);
-		
-		if(!$result)
-		{
-			header('Location: ../../eroare.php');
-			exit;
+		<script>
+			window.location.href = '../../index.html';
+    		alert("Exista deja numele de utilizator");
+		</script>
+
+			<?php
 		}
-
-		if(!$row = mysqli_fetch_assoc($result) )
+		else
 		{
-			header('Location: ../../eroare.php');
-			exit;
-		}
 
-		header('Location: index.html');
-	}	
+			$sql= "INSERT INTO users (username, password, role) VALUES ('{$email}' ,'{$parola}','parent')"; 
+
+			$result = mysqli_query($connection, $sql);
+			
+			if(!$result)
+			{
+				header('Location: ../../eroare.php');
+				exit;
+			}
+
+			if(!$row = mysqli_fetch_assoc($result) )
+			{
+				header('Location: ../../eroare.php');
+				exit;
+			}
+
+			header('Location: ../../index.html');
+		}
+	
+	}
 
 
  ?>

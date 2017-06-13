@@ -1,0 +1,415 @@
+/*GENERAL STYLES*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body {
+	margin: 0;
+	background-color: #571111;
+}
+
+.center {
+	margin: 0 auto;
+	width:80%;
+}
+section
+{
+	background-color: #571111;
+	border-bottom: 5px solid #FED136;
+}
+
+section h3 {
+	color: #FED136;
+	float: left;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 90px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+section h4 {
+	color: white;
+	float: left;
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+	font-style: italic;
+	margin-bottom: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+/*HEADER*/
+header{
+	background-image: url("../img/background.png");
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+}
+
+header .center {
+	display: table;
+	height: 100vh;
+	position:relative;
+}
+
+header .logo {
+	position: absolute;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+header nav {
+	position: absolute;
+	right: 0;
+} 
+
+header nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+header nav li {
+	display: inline;
+}
+
+header nav a {
+	color: white;
+	cursor: pointer;
+	font-family: 'Palanquin Dark',sans-serif;
+	font-size: 14px;
+	line-height: 40px;
+	padding: 3px 3px 3px 35px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header nav a span {
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	transition: border .2s;
+}
+
+header nav li i
+{
+	color: white;
+	font-size: 45px;
+	padding: 5px;
+	display: table-cell;
+	text-align: center;
+}
+
+header nav a span i {
+	padding-left: 0;
+}
+
+header nav a:hover span,
+header nav a.active span {
+	border-bottom: 2px solid #FED136;
+}
+
+#conectare
+{
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	display: none;
+	margin-top: 10px;
+}
+
+ header form label
+ {
+ 	color: white;
+ 	padding: 10px;
+ 	font-family: 'PT Serif', sans-serif;
+  	font-size: 12px;
+ }
+header form input
+{
+	width: 150px;
+}
+ header form #nume label
+ {
+  	margin-left: 10px;
+ }
+
+ header form #button
+ {
+ 	margin-top:20px;
+ 	margin-right: 20px;
+ 	float: right;
+ 	transform: scale(2);
+ }
+
+ header form #button a
+ {
+ 	color: white;
+ }
+
+ header form #nume
+ {
+ 	margin-bottom: 5px;
+ }
+
+ header form #parola label
+ {
+  	margin-left: 11px;
+ }
+
+header nav ul li:last-child span:hover, 
+{
+	display: inline;
+}
+
+.nume 
+{
+	margin-right: 40px;
+}
+
+
+header .middle{
+	display: table-cell;
+	width: 100%;
+	text-align: center;
+	vertical-align:middle;
+} 
+
+h1 {
+	color: white;
+	font-family: 'Montserrat', serif;
+	font-size: 70px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+header .middle button {
+	background-color: #FED136;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-family: 'Palaquin Dark', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	height: 65px;
+	margin-top: 60px;
+	transition: background-color .2s, color .6s;
+	width: 240px;
+}
+
+header .middle button:hover {
+	background-color: #FFF;
+	color: #FED136;
+}
+
+/*SECTION CONNECT*/
+
+body #cont 
+{
+	display: block;
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+
+#cont div
+{
+	padding: 10px;
+	/*margin-top: 10px;*/
+}
+
+#cont input
+{
+	height: 45px;
+	width: 350px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #dbe2e8;
+    font-size: 14px;
+    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
+    border-radius: 2px;
+    color: #2e3d49;
+    cursor: pointer;
+}
+
+#cont i
+{
+	color: #FED136;
+	font-size: 20px;
+}
+
+#data_nastere-signup input
+{
+	width: 114px;
+	height: 45px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #dbe2e8;
+    font-size: 14px;
+    border-radius: 2px;
+    color: #2e3d49;
+    cursor: pointer ;
+}
+
+#cont #connectButton, #cont .social
+{
+    font-family: 'Palaquin Dark',sans-serif;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #FED136;
+    color: #fff;
+    margin-left: 15px;
+    width: 350px;
+    height: 45px;
+}
+
+#cont .social i
+{
+	color: black;
+}
+
+#cont .social
+{
+    background: #fff;
+    color: #2e3d49;
+    border: 1px solid #dbe2e8;
+    margin: 0;
+    width: 165px;
+    font-size: 15px;
+    font-weight: 400;
+    display: inline;
+    margin-left: 15px;
+}
+
+/*SECTION ABOUT*/
+
+/*SECTION: ABOUT US*/
+#about {
+	float: left;
+	width: 100%;
+	/*padding-left: 50%;*/
+}
+
+
+#about .timeline {
+	padding: 0;
+	list-style: none;
+	margin-top: 30px;
+}
+
+#about .timeline > li {
+	float: left;
+	transform: translateX(-21px);
+	margin-bottom: 30px;
+}
+
+#about .timeline > li .description {
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+	color: white;
+	font-weight: normal;
+}
+
+#about .timeline > li .description strong {
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 22px;
+	color: #FED136;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#about .timeline > li:nth-child(even) {
+	transform: translateX(377px);
+}
+
+#about .timeline > li:nth-child(even) .description {
+	float: right;
+}
+
+#about .timeline > li:nth-child(even) figure {
+	float: left;
+	margin-right: 5px;
+}
+
+#about .timeline > li:nth-child(odd) {
+	text-align: right;
+}
+
+#about .timeline > li:nth-child(odd) figure {
+	margin-left: 5px;
+}
+
+#about .timeline figure {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	float: right;
+	margin: 0;
+}
+#about .timeline img{
+	width: 150px;
+	height: 150px;
+}
+
+#about .timeline .description {
+	float: left;
+	width: 400px;
+}
+
+/*SECTIONS*/
+
+section p 
+{
+   color: white;
+   font-size: 18px;
+   font-family: "PT Sans";
+   text-align: justify;
+   margin: 0;
+   padding: 0 10px;
+} 
+
+section i 
+{
+   color: white;
+   font-size: 18px;
+   font-family: "PT Sans";
+   text-align: justify;
+   margin-left: 150px;
+   padding: 0 10px;
+  /* width: 50%;
+   padding-left: 25%;
+   padding-right: 25%;
+*/} 
+
+section p i
+{
+   color: #FF3333;
+   font-size: 38px;
+   font-family: Aladin;
+   font-style: bold;
+}
+
+.descriere img
+{
+   width: 70%;  
+   margin: 20px 0px; 
+   display: block;
+   padding: 0px 15%;
+}
+
+
+
+
