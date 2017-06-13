@@ -145,7 +145,7 @@
                   }
                   
                   $row = mysqli_fetch_assoc($query_INFO);
-                  
+                  $best = "nimic";
 
                   if($row['matematica'] > $row['muzica'] && $row['matematica'] > $row['mediu'])
                   {
